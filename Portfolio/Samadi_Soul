@@ -1,0 +1,48 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <title style="color: white; font: 1em sans-serif;">Samadi Soul</title>
+    </head>
+    <style>
+        body{background-color: white;}
+        h1{color: black;}
+        p{color: black;}
+    </style>
+    <body>
+        <p1>Web and mobile app description</p1>
+
+        <h1>Timeline</h1>
+        <h1>Phase 1: Research</h1>
+        <h2>Data Visualization & Analysis</h2>
+
+        <h1>Phase 2: Define</h1>
+        <h2>User Personas</h2>
+
+        <h1>Phase 2: Define</h1>
+        <h2>User Journey Mapping</h2>
+
+        <h1>Phase 2: Define</h1>
+        <h2>Site Structure & Navigation</h2>
+
+        <h1>Phase 3: Ideation</h1>
+        <h2>Brainstorming—Jam Board</h2>
+
+        <h1>Phase 3: Ideation</h1>
+        <h2>Wireframe</h2>
+
+        <h1>Phase 4: Design</h1>
+        <h2>Style Guidelines</h2>
+
+        <h1>Phase 4: Design</h1>
+        <h2>System Design</h2>
+
+        <h1>Phase 4: Design</h1>
+        <h2>Interactive Prototype</h2>
+
+        <h1>Phase 5: Implementation</h1>
+        <h2>Collaboration with Developers</h2>
+
+        <h1>Phase 6: Launch</h1>
+        <h2>Deployment & Feedback</h2>
+    </body>
+</html>
