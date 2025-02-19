@@ -12,10 +12,53 @@
             margin-left: auto;  /* Center the image horizontally */
             margin-right: auto; /* Center the image horizontally */
         }
+        .fade-text {
+            font-size: 2rem;
+            font-weight: bold;
+            position: relative;
+            overflow: hidden;
+            width: 100%;  /* Adjust as necessary */
+            height: 40px; /* Adjust the height to match your text size */
+        }
+
+        .fade-text span {
+            position: absolute;
+            opacity: 0;
+            animation: fadeInOut 4s infinite;
+        }
+
+        .fade-text span:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .fade-text span:nth-child(2) {
+            animation-delay: 2s; /* Delay for second text to appear after the first fades */
+        }
+
+        @keyframes fadeInOut {
+            0% {
+                opacity: 0;
+            }
+            25% {
+                opacity: 1;
+            }
+            75% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 <body>
 
+    <div class="fade-text">
+        <span>I'm Valerie, an UI/UX designer</span>
+        <span>I'm Valerie, a graphic designer</span>
+        <span>I'm Valerie, a digital illustrator</span>
+        <span>I'm Valerie, a software developer </span>
+    </div>
     <img src="Research.png" alt="UX Design Process Timeline">
     <img src="Phase3.png" alt = "Phase 3">
 
