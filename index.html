@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Image</title>
     <style>
+        .slider-container {
+            overflow: hidden; /* Hides the part of the image that's outside the container */
+            width: 100%; /* Adjust the width based on your needs */
+            height: 300px; /* Adjust height as needed */
+            position: relative;
+        }
+
+        /* Image that will slide in */
+        .slide-in {
+            position: absolute;
+            left: -100%; /* Start from outside of the container (left side) */
+            animation: slide 3s ease-in-out forwards; /* Animation properties */
+        }
+
         img {
             width: 85%;  /* Make the image responsive to the width of its container */
             height: auto; /* Maintain aspect ratio */
@@ -30,22 +44,6 @@
             text-align: center; /* Centers the text */
         }
 
-        .fade-text span:nth-child(1) {
-            animation-delay: 0s;
-        }
-
-        .fade-text span:nth-child(2) {
-            animation-delay: 2s; /* Delay for second text to appear after the first fades */
-        }
-
-        .fade-text span:nth-child(3) {
-            animation-delay: 4s; /* Delay for third text to appear */
-        }
-
-        .fade-text span:nth-child(4) {
-            animation-delay: 6s; /* Delay for fourth text to appear */
-        }
-
         @keyframes fadeInOut {
             0% {
                 opacity: 0;
@@ -63,6 +61,23 @@
                 opacity: 0;
             }
         }
+
+        .fade-text span:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .fade-text span:nth-child(2) {
+            animation-delay: 2s; /* Delay for second text to appear after the first fades */
+        }
+
+        .fade-text span:nth-child(3) {
+            animation-delay: 4s; /* Delay for third text to appear */
+        }
+
+        .fade-text span:nth-child(4) {
+            animation-delay: 6s; /* Delay for fourth text to appear */
+        }
+        
     </style>
     <body>
     
@@ -72,8 +87,14 @@
             <span>I'm Valerie, a digital illustrator</span>
             <span>I'm Valerie, a software developer</span>
         </div>
+
         <img src="Research.png" alt="UX Design Process Timeline">
-        <img src="Phase3.png" alt = "Phase 3">
+
+        <div class="slider-container">
+            <img src="Phase3.png.jpg" alt="Phase 3 part 1" class="slide-in">
+            <img src="Phase 3 pt 2.png" alt= "Phase 3 part 2" class="slide-in">
+            <img src="Phase 3 pt 3.png" alt= "Phase 3 part 3" class="slide-in">
+        </div>
     
     </body>
     
