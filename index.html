@@ -12,54 +12,6 @@
             margin-left: auto;  /* Center the image horizontally */
             margin-right: auto; /* Center the image horizontally */
         } 
-
-        .fade-text {
-            font-size: 2rem;
-            font-weight: bold;
-            position: relative;
-            overflow: hidden;
-            width: 100%;  /* Adjust as necessary */
-            height: 40px; /* Adjust the height to match your text size */
-        }
-    
-        .fade-text span {
-            position: absolute;
-            opacity: 0;
-            animation: fadeInOut 8s infinite;
-            width: 100%;
-            text-align: center; /* Centers the text */
-        }
-    
-        .fade-text span:nth-child(1) {
-            animation-delay: 0s;
-        }
-    
-        .fade-text span:nth-child(2) {
-            animation-delay: 2s; /* Delay for second text to appear after the first fades */
-        }
-    
-        .fade-text span:nth-child(3) {
-            animation-delay: 4s; /* Delay for third text to appear */
-        }
-    
-        .fade-text span:nth-child(4) {
-            animation-delay: 6s; /* Delay for fourth text to appear */
-        }
-    
-        @keyframes fadeInOut {
-            0% {
-                opacity: 0;
-            }
-            25% {
-                opacity: 1;
-            }
-            75% {
-                opacity: 1;
-            }
-            100% {
-                opacity: 0;
-            }
-        }
     </style>
     <body>
         <img src="Research.png" alt="UX Design Process Timeline">
