@@ -145,6 +145,9 @@
             width: 500px;
             height: 500px;
             background-color: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
         }
         .overlay-box{
             background: #111;
@@ -165,6 +168,14 @@
         .overlay.show .overlay-box{
             transform: scale(1);
             opacity: 1;
+        }
+        .close-btn{
+            position: absolute;
+            top:10px;
+            right:15px;
+            font-size:28px;
+            cursor:pointer;
+            color: white;
         }
     </style>
     <body>
@@ -236,7 +247,8 @@
                     <img src="icon-holder3.png" alt="">
                 </a>
             </li>
-            <div id="overlay1" class="overlay">
+        </ul>
+        <div id="overlay1" class="overlay">
             <div class="overlay-box">
                 <span class="close-btn">&times;</span>
                 <h2>Hollistic Wellness</h2>
@@ -257,6 +269,5 @@
                 <p>This is the overlay content</p>
             </div>
         </div>
-        </ul>
     </body>
     
