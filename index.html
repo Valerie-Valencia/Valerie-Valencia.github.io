@@ -76,7 +76,36 @@
             margin-left: 96px;
             margin-top: 10px;
         }
-        
+        .case-study-menu{
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+            background-color: #16181B;
+        }
+        .case-study-menu li{
+            margin: 0 20px;
+        }
+        .case-study-menu a{
+            text-decoration: none;
+            color: fafafa;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .case-study-menu img{
+            width: 40px;
+            height: 40px;
+            margin-bottom: 5px;
+            transition: transform 0.2s;
+        }
+        .case-study-menu a:hover img{
+            transform: scale(1.1);
+        }
+        .case-study-menu a:hover span{
+            color: #fafafa;
+        }
     </style>
     <body>
         <nav class="navbar">
@@ -95,6 +124,26 @@
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br>
         </p>
         <h3>CASE STUDIES</h3>
+        <ul class="case-study-menu">
+            <li>
+                <a href="">
+                    <img src="icon-holder1.png" alt="Image 1">
+                    <span>Hollistic Wellness<br>Event Website</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="icon-holder2.png" alt="Image 2">
+                    <span>Financial Management<br>Mobile Application</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="icon-holder3.png" alt="Image 3">
+                    <span>Master Capstone</span>
+                </a>
+            </li>
+        </ul>
         <h4 class="left-header">DESIGN TOOLKIT</h4>
     </body>
     
