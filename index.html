@@ -11,19 +11,14 @@
             margin: 0;
             padding: 0;
         }
-        .video-mask {
+        video {
             position: absolute;
             top: 50%;
             right: 5%;
             transform: translateY(-50%);
-            width: 35vw;
-            max-width: 500px;
-            aspect-ratio: 2.5 / 1;
-            pointer-events: none;
-        }
-        video {
-            width: 100%;
-            height: 100%;
+            width: auto;
+            height: auto;
+            max-width: none;
             object-fit: cover;
 
             /* Keep text at 600px, scale mask proportionally */
