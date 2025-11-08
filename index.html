@@ -80,13 +80,15 @@
         }
         .carousel{
             position: relative;      /* needed to stack h2s */
-            width: max-content;            /* adjust for your headings */
+            width: 100%;  
+            max-width: 800px;          /* adjust for your headings */
             height: 70px;            /* height of one heading */
             overflow: hidden;        /* hide other headings */  
         }
         .carousel h2{
             position: absolute;      /* stack on top of each other */
             margin: 0;
+            width: 100%;
             opacity: 0;              /* hidden by default */
             padding-left: 96px;
             line-height: 70px;
