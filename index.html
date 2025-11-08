@@ -11,6 +11,31 @@
             margin: 0;
             padding: 0;
         }
+        .video-mask{
+            position: absolute;
+            top: 50%;
+            right: 5%;
+            transform: translateY(-50%);
+            width: 35vw;
+            max-width: 500px;
+            aspect-ratio: 1 /1;
+            pointer-events: none;
+        }
+        video{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Mask using SVG text "26" */
+            -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500"><text x="50%" y="50%" font-size="400" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="white">26</text></svg>');
+            -webkit-mask-repeat: no-repeat;
+            -webkit-mask-position: center;
+            -webkit-mask-size: contain;
+
+            mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500"><text x="50%" y="50%" font-size="400" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="white">26</text></svg>');
+            mask-repeat: no-repeat;
+            mask-position: center;
+            mask-size: contain;
+        }
         .navbar {
            background-color: #16181B; 
            overflow: hidden; 
