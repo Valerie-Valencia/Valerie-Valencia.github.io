@@ -11,7 +11,7 @@
             margin: 0;
             padding: 0;
         }
-        .video-mask{
+        .video-mask {
             position: absolute;
             top: 50%;
             right: 5%;
@@ -21,15 +21,16 @@
             aspect-ratio: 2.5 / 1;
             pointer-events: none;
         }
-        video{
+        video {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            /* Mask using SVG text "26" */
+
+            /* Keep text at 600px, scale mask proportionally */
             -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" overflow="visible"><text x="50%" y="55%" font-size="600" font-family="Calibri" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="white">2026</text></svg>');
             -webkit-mask-repeat: no-repeat;
             -webkit-mask-position: center;
-            -webkit-mask-size: contain;
+            -webkit-mask-size: contain; /* keeps aspect ratio, preserves font size relative to SVG */
 
             mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" overflow="visible"><text x="50%" y="55%" font-size="600" font-family="Calibri" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="white">2026</text></svg>');
             mask-repeat: no-repeat;
