@@ -79,6 +79,22 @@
             padding: 0;
 
         }
+        .carousel{
+            position: relative;      /* needed to stack h2s */
+            width: 600px;            /* adjust for your headings */
+            height: 50px;            /* height of one heading */
+            overflow: hidden;        /* hide other headings */  
+        }
+        .carousel h2{
+            position: absolute;      /* stack on top of each other */
+            top: 0;
+            left: 0;
+            opacity: 0;              /* hidden by default */
+            transition: opacity 0.5s ease-in-out;  /* fade effect */
+        }
+        .carousel h2.active{
+            opacity: 1;
+        }
         h3{
             color: #dadada;
             font-family: "Calibri", sans-serif;
@@ -244,7 +260,11 @@
             </ul>
         </nav>
         <img src="Portfolio Logo.png" alt="Portfolio Logo" style="width: 75px; height: 80px; margin-left: 225px; margin-top: 15px; margin-bottom: 0px;">
-        <h2>UX/UI + PRODUCT DESIGNER</h2>
+        <div class="carousel">
+            <h2 class="active">USER EXPERIENCE DESIGNER</h2>
+            <h2>USER INTERFACE DESIGNER</h2>
+            <h2>PRODUCT DESIGNER</h2>
+        </div>
         <h1>DRIVEN BY VISUAL<br>STORYTELLING</h1>
         <p>Creating user-centered designs. Lorem ipsum dolor sit amet, <br>
             consectetur adipiscing elit, sed do eiusmod tempor incididunt <br>
@@ -321,5 +341,17 @@
                 });
             });
         </script>
+        <script>
+            const headings = document.querySelectorAll('.carousel h2'); // select all headings
+            let current = 0; // start with the first heading
+            const delay = 3000; // 3 seconds per heading
+
+            setInterval(() => {
+                headings[current].classList.remove('active');  // hide current
+                current = (current + 1) % headings.length;     // next heading
+                headings[current].classList.add('active');     // show next
+            }, delay);
+        </script>
+
     </body>
     
