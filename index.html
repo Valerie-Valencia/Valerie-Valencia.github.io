@@ -219,22 +219,22 @@
             height: 40;
             width: auto;
         }
-        .overlay{
-            display: none;
+        .overlay {
+            display: none; /* hidden by default */
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.6);
-            justify-content: flex-start;
-            align-items: center;
+            justify-content: center; /* center horizontally */
+            align-items: center;     /* center vertically */
             z-index: 9999;
         }
-        .overlay.show{
-            display: flex;
+        .overlay.show {
+            display: flex; /* show overlay */
         }
-        .overlay-box{
+        .overlay-box {
             background: #111;
             width: 350px;
             height: 350px;
@@ -249,18 +249,18 @@
             transform: scale(0.9);
             opacity: 0;
             transition: transform 0.3s ease, opacity 0.3s ease;
-            margin-left: 96px;
+            margin: 0; /* remove margin-left to center properly */
         }
-        .overlay.show .overlay-box{
+        .overlay.show .overlay-box {
             transform: scale(1);
             opacity: 1;
         }
-        .close-btn{
+        .close-btn {
             position: absolute;
-            top:10px;
-            right:15px;
-            font-size:28px;
-            cursor:pointer;
+            top: 10px;
+            right: 15px;
+            font-size: 28px;
+            cursor: pointer;
             color: white;
         }
     </style>
