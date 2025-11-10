@@ -384,28 +384,31 @@
             }, delay);
         </script>
         <script>
-            const list = document.querySelector('.case-study-menu');
             const container = document.querySelector('.carousel-container');
+            const list = document.querySelector('.case-study-menu');
 
-            // Clone the list content for infinite looping
+            // Clone items for infinite loop
             list.innerHTML += list.innerHTML;
 
             let scrollAmount = 0;
-            const scrollSpeed = 0.9; // Adjust for faster/slower motion
+            const scrollSpeed = 0.9;
 
             function autoScroll() {
                 scrollAmount += scrollSpeed;
-                // When we’ve scrolled half (the original width), reset
+
+                // Loop back when half of the list has scrolled
                 if (scrollAmount >= list.scrollWidth / 2) {
-                scrollAmount = 0;
+                    scrollAmount = 0;
                 }
-                list.style.transform = `translateX(-${scrollAmount}px)`;
+
+                // Instead of transform, scroll the container
+                container.scrollLeft = scrollAmount;
+
                 requestAnimationFrame(autoScroll);
             }
 
-            // Ensure smooth animation
-            list.style.willChange = 'transform';
             autoScroll();
+
         </script>
 
 
