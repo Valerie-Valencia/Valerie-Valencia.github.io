@@ -263,6 +263,17 @@
             cursor: pointer;
             color: white;
         }
+        .crescent-rectangle {
+            width: 200px;      /* rectangle width */
+            height: 400px;     /* rectangle height */
+            background-color: #fafafa;
+            /* Create crescent cutout on left */
+            clip-path: path('M40 0 H200 V400 H40 C40 350 40 250 40 200 C40 150 40 50 40 0 Z');
+            
+            /* Optional: smooth edges */
+            border-radius: 0 20px 20px 0;
+        }
+
     </style>
     <body>
         <div class="video-mask">
@@ -276,6 +287,7 @@
                 <li><a href="#contact">CONTACT</a></li>
             </ul>
         </nav>
+        <div class="crescent-rectangle"></div>
         <img src="Portfolio Logo.png" alt="Portfolio Logo" style="width: 75px; height: 80px; margin-left: 225px; margin-top: 15px; margin-bottom: 0px;">
         <div class="carousel">
             <h2 class="active">USER EXPERIENCE DESIGNER</h2>
