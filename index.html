@@ -352,35 +352,35 @@
             </li>
         </ul>
         <script>
-            /*const container = document.querySelector('.carousel-container');*/
+            // Select all the showcase links
+            const menuItems = document.querySelectorAll('.showcase-item');
             const overlays = document.querySelectorAll('.overlay');
             const closeButtons = document.querySelectorAll('.close-btn');
 
-            // Event delegation for all showcase-items
-            container.addEventListener('click', e => {
-                const item = e.target.closest('.showcase-item');
-                if (!item) return; // Click outside an item
-
-                e.preventDefault();
-                const overlay = document.getElementById(item.dataset.overlay);
-                if (overlay) overlay.classList.add('show');
+            menuItems.forEach(item => {
+                item.addEventListener('click', e => {
+                    e.preventDefault(); // Prevent default anchor behavior
+                    const overlayId = item.dataset.overlay;
+                    const overlay = document.getElementById(overlayId);
+                    if (overlay) {
+                        overlay.classList.add('show'); // Add class to make overlay visible
+                    }
+                });
             });
 
-            // Close buttons
             closeButtons.forEach(btn => {
                 btn.addEventListener('click', () => {
                     btn.closest('.overlay').classList.remove('show');
                 });
             });
 
-            // Close overlay when clicking outside the box
             overlays.forEach(overlay => {
                 overlay.addEventListener('click', e => {
+                    // Close if clicking outside the overlay-box
                     if (e.target === overlay) overlay.classList.remove('show');
                 });
             });
-            </script>
-
+        </script>
         <script>
             const headings = document.querySelectorAll('.carousel h2'); // select all headings
             let current = 0; // start with the first heading
