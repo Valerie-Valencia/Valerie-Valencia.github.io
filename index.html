@@ -8,11 +8,21 @@
         body {
             background-color: #16181B;
             /*background: linear-gradient(to right, #16181B 45%, #fafafa 45%);*/
+        }
+        .border-wrapper{
             border: 10px solid #fafafa;
             border-top-right-radius: 30%;
             border-bottom-right-radius: 30%;
             margin: 0;
             padding: 0;
+            z-index: 1;
+        }
+        .outside-content{
+            position: absolute;
+            top: 20px;
+            left: -100px;
+            color: #fafafa;
+            z-idenx: 2;
         }
         video {
             position: absolute;
@@ -281,93 +291,95 @@
         }
     </style>
     <body>
-        <div class="video-mask">
-        <video src="171942-846113545_tiny.mp4" autoplay muted loop style="filter: hue-rotate(210deg);"></video>
-        </div>
-        <nav class="navbar">
-            <ul>
-                <li><a href="#index">HOME</a></li>
-                <li><a href="#showcases">SHOWCASES</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#contact">CONTACT</a></li>
+        <div class="border-wrapper">
+            <div class="video-mask">
+            <video src="171942-846113545_tiny.mp4" autoplay muted loop style="filter: hue-rotate(210deg);"></video>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#index">HOME</a></li>
+                    <li><a href="#showcases">SHOWCASES</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+            <img src="Portfolio Logo.png" alt="Portfolio Logo" style="width: 75px; height: 80px; margin-left: 225px; margin-top: 10px; margin-bottom: 12px;">
+            <h2 style="margin-bottom: 0px; margin-left: 96px; margin-top: 5px;">I'M VALERIE VALENCIA,</h2>
+            <div class="carousel">
+                <h2 class="active">AN USER EXPERIENCE DESIGNER</h2>
+                <h2>AN USER INTERFACE DESIGNER</h2>
+                <h2>A PRODUCT DESIGNER</h2>
+            </div>
+            <h1>—DRIVEN BY VISUAL<br>STORYTELLING.</h1>
+            <p>Creating user-centered designs. Lorem ipsum dolor sit amet, <br>
+                consectetur adipiscing elit, sed do eiusmod tempor incididunt <br>
+                quis nostrud exercitation ullamco laboris nisi ut aliquip. <br>
+            </p>
+            <h3>CASE STUDIES</h3>
+            <div class="carousel-container">
+                <ul class="case-study-menu">
+                <li>
+                    <a href="#overlay1" class="showcase-item" data-overlay="overlay1">
+                        <img src="Yoga RESIZED.png" alt="Image 1">
+                        <span><p style="font-size: 15px; margin-left: 0px; margin-bottom: 10px; margin-top: 20px; letter-spacing: 2px;">RESPONSIVE WEBSITE</p></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#overlay2" class="showcase-item" data-overlay="overlay2">
+                        <img src="shopping RESIZED.png" alt="Image 2">
+                        <span><p style="font-size: 15px; margin-left: 0px; margin-bottom: 10px; margin-top: 20px; letter-spacing: 2px;">ANDROID MOBILE APP</p></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#overlay3" class="showcase-item" data-overlay="overlay3">
+                        <img src="game RESIZED.png" alt="Image 3">
+                        <span><p style="font-size: 15px; margin-left: 0px; margin-bottom: 10px; margin-top: 20px; letter-spacing: 2px;">CROSS-PLATFORM</p></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#overlay4" class="showcase-item" data-overlay="overlay4">
+                        <img src="ecommerce.png" alt="Image 4">
+                        <span><p style="font-size: 15px; margin-left: 0px; margin-bottom: 10px; margin-top: 20px; letter-spacing: 2px;">E-COMMERCE</p></span>
+                    </a>
+                </li>
             </ul>
-        </nav>
-        <img src="Portfolio Logo.png" alt="Portfolio Logo" style="width: 75px; height: 80px; margin-left: 225px; margin-top: 10px; margin-bottom: 12px;">
-        <h2 style="margin-bottom: 0px; margin-left: 96px; margin-top: 5px;">I'M VALERIE VALENCIA,</h2>
-        <div class="carousel">
-            <h2 class="active">AN USER EXPERIENCE DESIGNER</h2>
-            <h2>AN USER INTERFACE DESIGNER</h2>
-            <h2>A PRODUCT DESIGNER</h2>
-        </div>
-        <h1>—DRIVEN BY VISUAL<br>STORYTELLING.</h1>
-        <p>Creating user-centered designs. Lorem ipsum dolor sit amet, <br>
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt <br>
-            quis nostrud exercitation ullamco laboris nisi ut aliquip. <br>
-        </p>
-        <h3>CASE STUDIES</h3>
-        <div class="carousel-container">
-            <ul class="case-study-menu">
-            <li>
-                <a href="#overlay1" class="showcase-item" data-overlay="overlay1">
-                    <img src="Yoga RESIZED.png" alt="Image 1">
-                    <span><p style="font-size: 15px; margin-left: 0px; margin-bottom: 10px; margin-top: 20px; letter-spacing: 2px;">RESPONSIVE WEBSITE</p></span>
-                </a>
-            </li>
-            <li>
-                <a href="#overlay2" class="showcase-item" data-overlay="overlay2">
-                    <img src="shopping RESIZED.png" alt="Image 2">
-                    <span><p style="font-size: 15px; margin-left: 0px; margin-bottom: 10px; margin-top: 20px; letter-spacing: 2px;">ANDROID MOBILE APP</p></span>
-                </a>
-            </li>
-            <li>
-                <a href="#overlay3" class="showcase-item" data-overlay="overlay3">
-                    <img src="game RESIZED.png" alt="Image 3">
-                    <span><p style="font-size: 15px; margin-left: 0px; margin-bottom: 10px; margin-top: 20px; letter-spacing: 2px;">CROSS-PLATFORM</p></span>
-                </a>
-            </li>
-            <li>
-                <a href="#overlay4" class="showcase-item" data-overlay="overlay4">
-                    <img src="ecommerce.png" alt="Image 4">
-                    <span><p style="font-size: 15px; margin-left: 0px; margin-bottom: 10px; margin-top: 20px; letter-spacing: 2px;">E-COMMERCE</p></span>
-                </a>
-            </li>
-        </ul>
-        </div>
-        <div id="overlay1" class="overlay">
-            <div class="overlay-box">
-                <span class="close-btn">&times;</span>
-                <h2>Hollistic Wellness</h2>
-                <p>This is the overlay content</p>
             </div>
-        </div>
-        <div id="overlay2" class="overlay">
-            <div class="overlay-box">
-                <span class="close-btn">&times;</span>
-                <h2>Hollistic Wellness</h2>
-                <p>This is the overlay content</p>
+            <div id="overlay1" class="overlay">
+                <div class="overlay-box">
+                    <span class="close-btn">&times;</span>
+                    <h2>Hollistic Wellness</h2>
+                    <p>This is the overlay content</p>
+                </div>
             </div>
-        </div>
-        <div id="overlay3" class="overlay">
-            <div class="overlay-box">
-                <span class="close-btn">&times;</span>
-                <h2>Hollistic Wellness</h2>
-                <p>This is the overlay content</p>
+            <div id="overlay2" class="overlay">
+                <div class="overlay-box">
+                    <span class="close-btn">&times;</span>
+                    <h2>Hollistic Wellness</h2>
+                    <p>This is the overlay content</p>
+                </div>
             </div>
-        </div>
-        <div id="overlay4" class="overlay">
-            <div class="overlay-box">
-                <span class="close-btn">&times;</span>
-                <h2>Hollistic Wellness</h2>
-                <p>This is the overlay content</p>
+            <div id="overlay3" class="overlay">
+                <div class="overlay-box">
+                    <span class="close-btn">&times;</span>
+                    <h2>Hollistic Wellness</h2>
+                    <p>This is the overlay content</p>
+                </div>
             </div>
+            <div id="overlay4" class="overlay">
+                <div class="overlay-box">
+                    <span class="close-btn">&times;</span>
+                    <h2>Hollistic Wellness</h2>
+                    <p>This is the overlay content</p>
+                </div>
+            </div>
+            <!--<h4>DESIGN TOOLKIT</h4>
+            <ul class="tool-list">
+                <li>
+                    <a href="">
+                        <img src="Toolkit.png" alt="logos">
+                </li>
+            </ul>-->
         </div>
-        <!--<h4>DESIGN TOOLKIT</h4>
-        <ul class="tool-list">
-            <li>
-                <a href="">
-                    <img src="Toolkit.png" alt="logos">
-            </li>
-        </ul>-->
         <script>
             // Select all the showcase links
             const menuItems = document.querySelectorAll('.showcase-item');
@@ -434,7 +446,9 @@
             }
             autoScroll();
         </script>
+        <div class="outside-content">
 
+        </div>
 
     </body>
     
