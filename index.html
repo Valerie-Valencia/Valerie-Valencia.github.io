@@ -446,32 +446,6 @@
             }
             autoScroll();
         </script>
-        <script>
-            const dots = document.querySelectorAll('.pagination-icon .dot');
-            const sections = [
-                document.getElementById('sec1'),
-                document.getElementById('sec2'),
-                document.getElementById('sec3')
-            ];
-
-            function updateDots() {
-                let index = 0;
-
-                sections.forEach((section, i) => {
-                    const rect = section.getBoundingClientRect();
-                    const midpoint = window.innerHeight / 2;
-                    if (rect.top <= midpoint && rect.bottom >= midpoint) {
-                        index = i;
-                    }
-                });
-
-                dots.forEach(dot => dot.classList.remove('active'));
-                dots[index].classList.add('active');
-            }
-
-            window.addEventListener('scroll', updateDots);
-            window.addEventListener('load', updateDots);
-        </script>
         <div class="outside-content" style="text-align: center;">
             <h2 style="color: #16181B; font-weight: 300; margin-top: 80px; align-content: center;">THE DESIGN TOOLKIT</h2>
             <p style="color: #16181B;">Creating user-centered designs. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
