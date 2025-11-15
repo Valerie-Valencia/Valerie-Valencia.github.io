@@ -290,118 +290,95 @@
             cursor: pointer;
             color: white;
         }
-        .pagination-icon {
-            position: fixed;
-            right: 40px;
-            top: 50%;
-            transform: translateY(-50%);
-            display: flex;
-            flex-direction: column;
-            /*gap: 5px;*/           /* spacing between dots */
-            font-size: 52px;     /* size of dots */
-            color: #5a5a5a;      /* inactive color */
-            cursor: pointer;
-            z-index: 999;
-        }
-        .pagination-icon .dot.active {
-            color: #fafafa;      /* highlighted dot color */
-        }
     </style>
     <body>
-        <div class="border-wrapper">
-            <section id="sec1">
-                <div class="video-mask">
-                <video src="171942-846113545_tiny.mp4" autoplay muted loop style="filter: hue-rotate(210deg);"></video>
-                </div>
-                <nav class="navbar">
-                    <ul>
-                        <li><a href="#index">HOME</a></li>
-                        <li><a href="#showcases">SHOWCASES</a></li>
-                        <li><a href="#about">ABOUT</a></li>
-                        <li><a href="#contact">CONTACT</a></li>
-                    </ul>
-                </nav>
-                <img src="Portfolio Logo.png" alt="Portfolio Logo" style="width: 75px; height: 80px; margin-left: 225px; margin-top: 10px; margin-bottom: 12px;">
-                <h2 style="margin-bottom: 0px; margin-left: 96px; margin-top: 5px;">I'M VALERIE VALENCIA,</h2>
-                <div class="carousel">
-                    <h2 class="active">AN USER EXPERIENCE DESIGNER</h2>
-                    <h2>AN USER INTERFACE DESIGNER</h2>
-                    <h2>A PRODUCT DESIGNER</h2>
-                </div>
-                <h1>—DRIVEN BY VISUAL<br>STORYTELLING.</h1>
-                <p>Creating user-centered designs. Lorem ipsum dolor sit amet, <br>
-                    consectetur adipiscing elit, sed do eiusmod tempor incididunt <br>
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip. <br>
-                </p>
-                <div class="pagination-icon">
-                    <span class="dot active">•</span>
-                    <span class="dot">•</span>
-                    <span class="dot">•</span>
-                </div>
-                <h3>CASE STUDIES</h3>
-                <div class="carousel-container">
-                    <ul class="case-study-menu">
-                    <li>
-                        <a href="#overlay1" class="showcase-item" data-overlay="overlay1">
-                            <img src="Yoga RESIZED.png" alt="Image 1">
-                            <span><p style="font-size: 15px; margin-left: 0px; margin-bottom: 10px; margin-top: 20px; letter-spacing: 2px;">RESPONSIVE WEBSITE</p></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#overlay2" class="showcase-item" data-overlay="overlay2">
-                            <img src="shopping RESIZED.png" alt="Image 2">
-                            <span><p style="font-size: 15px; margin-left: 0px; margin-bottom: 10px; margin-top: 20px; letter-spacing: 2px;">ANDROID MOBILE APP</p></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#overlay3" class="showcase-item" data-overlay="overlay3">
-                            <img src="game RESIZED.png" alt="Image 3">
-                            <span><p style="font-size: 15px; margin-left: 0px; margin-bottom: 10px; margin-top: 20px; letter-spacing: 2px;">CROSS-PLATFORM</p></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#overlay4" class="showcase-item" data-overlay="overlay4">
-                            <img src="ecommerce.png" alt="Image 4">
-                            <span><p style="font-size: 15px; margin-left: 0px; margin-bottom: 10px; margin-top: 20px; letter-spacing: 2px;">E-COMMERCE</p></span>
-                        </a>
-                    </li>
+            <div class="video-mask">
+            <video src="171942-846113545_tiny.mp4" autoplay muted loop style="filter: hue-rotate(210deg);"></video>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#index">HOME</a></li>
+                    <li><a href="#showcases">SHOWCASES</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
                 </ul>
+            </nav>
+            <img src="Portfolio Logo.png" alt="Portfolio Logo" style="width: 75px; height: 80px; margin-left: 225px; margin-top: 10px; margin-bottom: 12px;">
+            <h2 style="margin-bottom: 0px; margin-left: 96px; margin-top: 5px;">I'M VALERIE VALENCIA,</h2>
+            <div class="carousel">
+                <h2 class="active">AN USER EXPERIENCE DESIGNER</h2>
+                <h2>AN USER INTERFACE DESIGNER</h2>
+                <h2>A PRODUCT DESIGNER</h2>
+            </div>
+            <h1>—DRIVEN BY VISUAL<br>STORYTELLING.</h1>
+            <p>Creating user-centered designs. Lorem ipsum dolor sit amet, <br>
+                consectetur adipiscing elit, sed do eiusmod tempor incididunt <br>
+                quis nostrud exercitation ullamco laboris nisi ut aliquip. <br>
+            </p>
+            <h3>CASE STUDIES</h3>
+            <div class="carousel-container">
+                <ul class="case-study-menu">
+                <li>
+                    <a href="#overlay1" class="showcase-item" data-overlay="overlay1">
+                        <img src="Yoga RESIZED.png" alt="Image 1">
+                        <span><p style="font-size: 15px; margin-left: 0px; margin-bottom: 10px; margin-top: 20px; letter-spacing: 2px;">RESPONSIVE WEBSITE</p></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#overlay2" class="showcase-item" data-overlay="overlay2">
+                        <img src="shopping RESIZED.png" alt="Image 2">
+                        <span><p style="font-size: 15px; margin-left: 0px; margin-bottom: 10px; margin-top: 20px; letter-spacing: 2px;">ANDROID MOBILE APP</p></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#overlay3" class="showcase-item" data-overlay="overlay3">
+                        <img src="game RESIZED.png" alt="Image 3">
+                        <span><p style="font-size: 15px; margin-left: 0px; margin-bottom: 10px; margin-top: 20px; letter-spacing: 2px;">CROSS-PLATFORM</p></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#overlay4" class="showcase-item" data-overlay="overlay4">
+                        <img src="ecommerce.png" alt="Image 4">
+                        <span><p style="font-size: 15px; margin-left: 0px; margin-bottom: 10px; margin-top: 20px; letter-spacing: 2px;">E-COMMERCE</p></span>
+                    </a>
+                </li>
+            </ul>
+            </div>
+            <div id="overlay1" class="overlay">
+                <div class="overlay-box">
+                    <span class="close-btn">&times;</span>
+                    <h2>Hollistic Wellness</h2>
+                    <p>This is the overlay content</p>
                 </div>
-                <div id="overlay1" class="overlay">
-                    <div class="overlay-box">
-                        <span class="close-btn">&times;</span>
-                        <h2>Hollistic Wellness</h2>
-                        <p>This is the overlay content</p>
-                    </div>
+            </div>
+            <div id="overlay2" class="overlay">
+                <div class="overlay-box">
+                    <span class="close-btn">&times;</span>
+                    <h2>Hollistic Wellness</h2>
+                    <p>This is the overlay content</p>
                 </div>
-                <div id="overlay2" class="overlay">
-                    <div class="overlay-box">
-                        <span class="close-btn">&times;</span>
-                        <h2>Hollistic Wellness</h2>
-                        <p>This is the overlay content</p>
-                    </div>
+            </div>
+            <div id="overlay3" class="overlay">
+                <div class="overlay-box">
+                    <span class="close-btn">&times;</span>
+                    <h2>Hollistic Wellness</h2>
+                    <p>This is the overlay content</p>
                 </div>
-                <div id="overlay3" class="overlay">
-                    <div class="overlay-box">
-                        <span class="close-btn">&times;</span>
-                        <h2>Hollistic Wellness</h2>
-                        <p>This is the overlay content</p>
-                    </div>
+            </div>
+            <div id="overlay4" class="overlay">
+                <div class="overlay-box">
+                    <span class="close-btn">&times;</span>
+                    <h2>Hollistic Wellness</h2>
+                    <p>This is the overlay content</p>
                 </div>
-                <div id="overlay4" class="overlay">
-                    <div class="overlay-box">
-                        <span class="close-btn">&times;</span>
-                        <h2>Hollistic Wellness</h2>
-                        <p>This is the overlay content</p>
-                    </div>
-                </div>
-            </section>
-            <section id="sec2">
-                <div class="outside-content" style="text-align: center;">
-                    <h2 style="color: #16181B; font-weight: 300; margin-top: 80px; align-content: center;">THE DESIGN TOOLKIT</h2>
-                    <p style="color: #16181B;">Creating user-centered designs. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                </div>
-            </section>
+            </div>
+            <!--<h4>DESIGN TOOLKIT</h4>
+            <ul class="tool-list">
+                <li>
+                    <a href="">
+                        <img src="Toolkit.png" alt="logos">
+                </li>
+            </ul>-->
         </div>
         <script>
             // Select all the showcase links
@@ -495,5 +472,9 @@
             window.addEventListener('scroll', updateDots);
             window.addEventListener('load', updateDots);
         </script>
+        <div class="outside-content" style="text-align: center;">
+            <h2 style="color: #16181B; font-weight: 300; margin-top: 80px; align-content: center;">THE DESIGN TOOLKIT</h2>
+            <p style="color: #16181B;">Creating user-centered designs. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+        </div>
     </body>
     
