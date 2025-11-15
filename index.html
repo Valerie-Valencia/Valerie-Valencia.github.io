@@ -295,10 +295,16 @@
             right: 40px;
             top: 50%;
             transform: translateY(-50%);
-            color: #fafafa;
-            font-size: 64px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;           /* spacing between dots */
+            font-size: 64px;     /* size of dots */
+            color: #5a5a5a;      /* inactive color */
             cursor: pointer;
             z-index: 999;
+        }
+        .pagination-icon .dot.active {
+            color: #fafafa;      /* highlighted dot color */
         }
     </style>
     <body>
@@ -326,7 +332,11 @@
                 consectetur adipiscing elit, sed do eiusmod tempor incididunt <br>
                 quis nostrud exercitation ullamco laboris nisi ut aliquip. <br>
             </p>
-            <div class="pagination-icon">⋮</div>
+            <div class="pagination-icon">
+                <span class="dot active">•</span>
+                <span class="dot">•</span>
+                <span class="dot">•</span>
+            </div>
             <h3>CASE STUDIES</h3>
             <div class="carousel-container">
                 <ul class="case-study-menu">
