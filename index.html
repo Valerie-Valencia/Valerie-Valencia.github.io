@@ -291,6 +291,70 @@
             cursor: pointer;
             color: white;
         }
+        /*NEW*/
+        .carousel-container2{
+            width: 720px;
+            height: 290px;
+            overflow: hidden;
+            margin-left: 96px;
+            margin-bottom: 90px;
+            position: relative;
+        }
+        .design-logos{
+            display: flex;
+            list-style: none;
+            margin-left: 76px;
+            padding: 0;
+            flex-wrap: nowrap;
+            background-color: transparent;
+        }
+        .design-logos li{
+            border-radius: 10px;
+            margin: 0 20px;
+        }
+        .design-logos a{
+            text-decoration: none;
+            font-family: "Calibri", sans-serif;
+            font-weight: bold;
+            font-size: 18px;
+            text-align: center;
+            color: #fafafa;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .design-logos img {
+            width: 400px;
+            height: 400px;
+            margin-top: 30px;
+            margin-bottom: 0px;
+            border-radius: 40px;
+            position: relative;
+            transition: all 0.3s;
+            
+            box-shadow: 
+                24px 24px 18px rgba(0, 0, 0, 0.55),
+                12px 12px 10px rgba(0, 0, 0, 0.35),
+                0px 0px 15px rgba(0, 0, 0, 0.15);
+        }
+        .design-logos a span{
+            color: #0a0a0a;
+            font-family: "Calibri", sans-serif;
+            font-weight: 300;
+        }
+        .showcase-item2{
+            position: relative;
+            display: inline-block; 
+        }
+        .showcase-item2::after{
+            content: '';
+            position: absolute;
+            top: 0; 
+            left: 0;
+            width: 400px;
+            height: 400px;
+            pointer-events: none;
+        }
     </style>
     <body>
         <div class="border-wrapper">
@@ -312,7 +376,7 @@
                 <h2>AN USER INTERFACE DESIGNER</h2>
                 <h2>A PRODUCT DESIGNER</h2>
             </div>
-            <h1>—DRIVEN BY VISUAL<br>STORYTELLING.</h1>
+            <h1>—DRIVEN BY VISUAL<br>STORYTELLING.</h1> <!-- move the showcase next to this horizontally, and make the boxes vertically rectangular-->
             <p>Creating user-centered designs. Lorem ipsum dolor sit amet, <br>
                 consectetur adipiscing elit, sed do eiusmod tempor incididunt <br>
                 quis nostrud exercitation ullamco laboris nisi ut aliquip. <br>
@@ -451,6 +515,58 @@
         <div class="outside-content" style="text-align: center;">
             <h2 style="color: #16181B; font-weight: 300; margin-top: 80px; align-content: center;">THE DESIGN TOOLKIT</h2>
             <p style="color: #16181B;">Creating user-centered designs. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            <div class="carousel-container2">
+                <ul class="design-logos">
+                <li>
+                    <a href="" class="showcase-item2" data-overlay="">
+                        <img src="Affinity Designer Logo.png" alt="">
+                        <span><p>RESPONSIVE WEBSITE</p></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="showcase-item2" data-overlay="">
+                        <img src="Affinity Photo Logo.png" alt="">
+                        <span><p>RESPONSIVE WEBSITE</p></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="showcase-item2" data-overlay="">
+                        <img src="Figma Logo.png" alt="">
+                        <span><p>RESPONSIVE WEBSITE</p></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="showcase-item2" data-overlay="">
+                        <img src="Mockup Logo.png" alt="">
+                        <span><p>RESPONSIVE WEBSITE</p></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="showcase-item2" data-overlay="">
+                        <img src="Freeform Logo.png" alt="">
+                        <span><p>RESPONSIVE WEBSITE</p></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="showcase-item2" data-overlay="">
+                        <img src="Canva Logo.png" alt="">
+                        <span><p>RESPONSIVE WEBSITE</p></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="showcase-item2" data-overlay="">
+                        <img src="Concepts Logo.png" alt="">
+                        <span><p>RESPONSIVE WEBSITE</p></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="showcase-item2" data-overlay="">
+                        <img src="Lucidchart Logo.png" alt="">
+                        <span><p>RESPONSIVE WEBSITE</p></span>
+                    </a>
+                </li>
+                </ul>
+            </div>
         </div>
     </body>
     
