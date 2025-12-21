@@ -52,6 +52,7 @@
             overflow: hidden;
             margin: 0;
             padding: 0;
+            position: relative; /* To position the menu icon */
         }
 
         .navbar ul {
@@ -85,45 +86,67 @@
             border-radius: 4px;
         }
 
+        /* Hide navbar links on mobile and tablets */
+        .menu-icon {
+            display: none; /* Hidden on larger screens */
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .menu-icon img {
+            width: 30px;
+            height: auto;
+        }
+
         /* ------------------------ Responsive Styles ------------------------ */
 
-        /* Tablets (768px - 1200px) */
-        @media (max-width: 1200px) {
+        /* Desktop: Show the navbar */
+        @media (min-width: 1201px) {
             .navbar ul {
-                gap: 40px; /* Decrease the gap between navbar items */
+                display: flex;
             }
 
-            .navbar a {
-                font-size: 16px; /* Slightly smaller font for tablets */
-                padding: 6px 10px; /* Adjust padding for smaller screens */
+            .menu-icon {
+                display: none; /* Hide the menu icon on desktop */
             }
         }
 
-        /* Tablets Portrait & Mobile Landscape (480px - 767px) */
-        @media (max-width: 767px) {
+        /* Tablets and Mobile Devices (up to 1200px) */
+        @media (max-width: 1200px) {
             .navbar ul {
-                flex-direction: column; /* Stack navbar items vertically */
-                gap: 20px; /* Space between items */
-                align-items: center; /* Center-align items */
+                display: none; /* Hide navbar links initially */
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                top: 60px; /* Position the menu below the menu icon */
+                right: 0;
+                background-color: #16181B;
+                width: 100%;
+                padding: 20px 0;
             }
 
             .navbar a {
-                font-size: 14px; /* Even smaller font on smaller screens */
-                padding: 10px 20px; /* Adjust padding to fit better on mobile */
+                font-size: 16px;
+                padding: 8px 15px;
+            }
+
+            /* Show the menu icon on tablets/mobile */
+            .menu-icon {
+                display: block;
             }
         }
 
         /* Mobile Devices (up to 480px) */
         @media (max-width: 480px) {
-            .navbar ul {
-                gap: 10px; /* Reduce gap further for mobile screens */
-            }
-
             .navbar a {
-                font-size: 12px; /* Small font size for mobile */
-                padding: 8px 15px; /* Adjust padding to fit the mobile screen better */
+                font-size: 14px;
+                padding: 10px 20px;
             }
         }
+
 
         /* Default Styles (for large screens) */
         h1 {
@@ -691,7 +714,10 @@
             <video src="171942-846113545_tiny.mp4" autoplay muted loop style="filter: hue-rotate(210deg);"></video>
             </div> -->
             <nav class="navbar">
-                <ul>
+                <div class="menu-icon" id=",enu-icon">
+                    <img src="menuicon.png" alt="Menu Icon" />
+                </div>
+                <ul id="navbar-links">
                     <li><a href="#index">HOME</a></li>
                     <li><a href="#showcases">SHOWCASES</a></li>
                     <li><a href="#about">ABOUT</a></li>
