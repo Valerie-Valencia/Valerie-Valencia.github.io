@@ -224,18 +224,19 @@
 
         /* Default Styles (Large screens) */
         .carousel {
-            position: relative;      
-            width: 100%;  
+            position: relative;
+            width: 100%;
             max-width: 800px;
             height: 80px;
-            overflow: hidden;  
+            overflow: hidden;
+            touch-action: none; /* Disable touch events that interfere with the scroll */
         }
 
         .carousel h2 {
             position: absolute;
             margin: 0;
             width: 100%;
-            opacity: 0;              
+            opacity: 0;
             padding-left: 96px;
             line-height: 70px;
             transition: opacity 0.5s ease-in-out;
@@ -243,7 +244,7 @@
 
         .carousel h2.active {
             opacity: 1;
-        } 
+        }
 
         .carousel-container {
             width: 720px;
@@ -289,7 +290,7 @@
             position: relative;
             transition: all 0.3s;
             filter: saturate(1.6) contrast(1.15) brightness(1.05);
-            box-shadow: 
+            box-shadow:
                 24px 24px 18px rgba(0, 0, 0, 0.55),
                 12px 12px 10px rgba(0, 0, 0, 0.35),
                 0px 0px 15px rgba(0, 0, 0, 0.15);
@@ -312,13 +313,13 @@
 
         .showcase-item {
             position: relative;
-            display: inline-block; 
+            display: inline-block;
         }
 
         .showcase-item::after {
             content: '';
             position: absolute;
-            top: 0; 
+            top: 0;
             left: 0;
             width: 200px;
             height: 200px;
@@ -336,21 +337,25 @@
                 margin-left: 60px;
                 margin-bottom: 60px;
             }
+
             .carousel h2 {
                 padding-left: 60px;
                 line-height: 60px;
             }
+
             .case-study-menu {
                 margin-left: 40px;
                 flex-wrap: wrap;
                 gap: 15px;
             }
+
             .case-study-menu img {
                 width: 160px;
                 height: 160px;
                 margin-top: 20px;
                 border-radius: 30px;
             }
+
             .case-study-menu a {
                 font-size: 16px;
             }
@@ -364,26 +369,31 @@
                 margin-left: 20px;
                 margin-bottom: 40px;
             }
+
             .carousel h2 {
                 padding-left: 20px;
                 line-height: 50px;
                 font-size: 20px;
             }
+
             .case-study-menu {
                 margin-left: 20px;
                 flex-wrap: wrap;
                 justify-content: center;
                 gap: 10px;
             }
+
             .case-study-menu img {
                 width: 120px;
                 height: 120px;
                 margin-top: 15px;
                 border-radius: 25px;
             }
+
             .case-study-menu a {
                 font-size: 14px;
             }
+
             .showcase-item::after {
                 width: 120px;
                 height: 120px;
@@ -398,26 +408,31 @@
                 margin-left: 10px;
                 margin-bottom: 30px;
             }
+
             .carousel h2 {
                 padding-left: 10px;
                 line-height: 40px;
                 font-size: 18px;
             }
+
             .case-study-menu {
                 margin-left: 10px;
                 flex-wrap: wrap;
                 justify-content: center;
                 gap: 8px;
             }
+
             .case-study-menu img {
                 width: 90px;
                 height: 90px;
                 margin-top: 10px;
                 border-radius: 20px;
             }
+
             .case-study-menu a {
                 font-size: 12px;
             }
+
             .showcase-item::after {
                 width: 90px;
                 height: 90px;
