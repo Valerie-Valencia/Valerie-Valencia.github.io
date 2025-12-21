@@ -142,7 +142,14 @@
 
         /* Add styles for the active menu when it's toggled */
         .navbar ul.active {
-            display: flex; /* This makes the menu visible */
+            display: flex !important; /* Forces the navbar to be shown */
+            flex-direction: column;
+            position: absolute;
+            top: 60px; /* Position the menu below the menu icon */
+            right: 0;
+            background-color: #16181B;
+            width: 100%;
+            padding: 20px 0;
         }
 
         /* Mobile Devices (up to 480px) */
