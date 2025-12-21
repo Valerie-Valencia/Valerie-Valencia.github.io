@@ -89,7 +89,8 @@
         html{
             background-color: #fafafa;
         }
-        h1{
+        /* Default Styles (for large screens) */
+        h1 {
             color: #fafafa;
             font-family: "Calibri", sans-serif;
             font-size: 50px;
@@ -101,18 +102,126 @@
             margin-bottom: 0px;
             padding: 0;
         }
-        h2{
+
+        h2 {
             color: #fafafa;
             font-family: "Calibri", sans-serif;
             font-size: 30px;
             font-weight: 300;
             letter-spacing: 5px;
             line-height: 2px;
-            margin-bottom: 0px;
             margin-top: 0;
+            margin-bottom: 0px;
             padding: 0;
-
         }
+
+        h3 {
+            color: #dadada;
+            font-family: "Calibri", sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-top: 45px;
+            margin-left: 96px;
+        }
+
+        h4 {
+            color: #16181B;
+            font-family: "Calibri", sans-serif;
+            justify-content: right;
+            font-size: 18px;
+            font-weight: 300;
+            margin-top: 0px;
+            margin-right: 96px;
+            text-align: right;
+        }
+
+        p {
+            color: #fafafa;
+            font-family: "Calibri", sans-serif;
+            font-weight: 300;
+            font-size: 18px;
+            margin-left: 96px;
+            margin-top: 25px;
+        }
+
+        /* Responsive Styles */
+
+        /* Tablets (768px - 1200px) */
+        @media (max-width: 1200px) {
+            h1 {
+                font-size: 40px;
+                line-height: 45px;
+                margin-left: 60px;
+            }
+            h2 {
+                font-size: 25px;
+                letter-spacing: 3px;
+            }
+            h3 {
+                font-size: 16px;
+                margin-left: 60px;
+            }
+            h4 {
+                font-size: 16px;
+                margin-right: 60px;
+            }
+            p {
+                font-size: 16px;
+                margin-left: 60px;
+            }
+        }
+
+        /* Tablets Portrait & Mobile Landscape (480px - 767px) */
+        @media (max-width: 767px) {
+            h1 {
+                font-size: 32px;
+                line-height: 38px;
+                margin-left: 40px;
+            }
+            h2 {
+                font-size: 22px;
+                letter-spacing: 2px;
+            }
+            h3 {
+                font-size: 14px;
+                margin-left: 40px;
+            }
+            h4 {
+                font-size: 14px;
+                margin-right: 40px;
+            }
+            p {
+                font-size: 14px;
+                margin-left: 40px;
+            }
+        }
+
+        /* Mobile Devices (up to 480px) */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 28px;
+                line-height: 32px;
+                margin-left: 20px;
+            }
+            h2 {
+                font-size: 20px;
+                letter-spacing: 1.5px;
+            }
+            h3 {
+                font-size: 12px;
+                margin-left: 20px;
+            }
+            h4 {
+                font-size: 12px;
+                margin-right: 20px;
+            }
+            p {
+                font-size: 12px;
+                margin-left: 20px;
+            }
+        }
+
         .carousel{
             position: relative;      /* needed to stack h2s */
             width: 100%;  
@@ -131,34 +240,7 @@
         }
         .carousel h2.active{
             opacity: 1;
-        }
-        h3{
-            color: #dadada;
-            font-family: "Calibri", sans-serif;
-            font-size: 18px;
-            font-weight: bold;
-            letter-spacing: 2px;
-            margin-top: 45px;
-            margin-left: 96px;
-        }
-        h4{
-            color: #16181B;
-            font-family: "Calibri", sans-serif;
-            justify-content: right;
-            font-size: 18px;
-            font-weight: 300;
-            margin-top: 0px;
-            margin-right: 96px; 
-            text-align: right;
-        }
-        p{
-            color:#fafafa;
-            font-family: "Calibri", sans-serif;
-            font-weight: 300;
-            font-size: 18px;
-            margin-left: 96px;
-            margin-top: 25px;
-        }
+        } 
         .carousel-container{
             width: 720px;
             height: 290px;
@@ -606,7 +688,7 @@
         </script>
         <div class="outside-content" style="text-align: center;">
             <h2 style="color: #16181B; font-weight: 300; margin-top: 80px; align-content: center;">THE DESIGN TOOLKIT</h2>
-            <p style="color: #16181B; text-align: center; margin-left: 0px; margin-right: 0px;">Creating user-centered designs. Lorem ipsum dolor sit amet.</p>
+            <p style="color: #16181B; text-align: center; margin-left: 0px; margin-right: 0px; margin-top: 25px;">Creating user-centered designs. Lorem ipsum dolor sit amet.</p>
             <div class="carousel-container2">
                 <ul class="design-logos">
                 <li>
