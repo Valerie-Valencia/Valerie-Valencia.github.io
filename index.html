@@ -5,72 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <style>
+        /* Base Styles */
         body {
             background-color: #fafafa;
-            /*background: linear-gradient(to right, #16181B 45%, #fafafa 45%);*/
         }
-        .border-wrapper{
+
+        .border-wrapper {
             background-color: #16181B;
             border: 1px solid #fafafa;
-            /*border-top-right-radius: 15%;*/
-            /*border-bottom-right-radius: 50%;*/
             margin: 0;
             padding: 0;
             z-index: 1;
         }
-        .outside-content{
-            /*border: 25px solid #16181B;*/
+
+        .outside-content {
             position: relative;
-            /*width: 100%;*/
             color: #fafafa;
             z-index: 2;
         }
-        .second-wrapper{
+
+        .second-wrapper {
             background-color: #16181B;
             border: 1px solid #fafafa;
             margin: 0;
             padding: 0;
             z-index: 3;
         }
-        /*
-        video {
-            position: absolute;
-            top: 50%;
-            right: 7%;
-            transform: translateY(-50%);
-            width: auto;
-            height: auto;
-            max-width: none;
-            object-fit: none;
 
-            -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1311" overflow="visible"><text x="5%" y="45%" font-size="900" font-family="Calibri" font-weight="800" text-anchor="right-align" dominant-baseline="middle" fill="white">%2726</text></svg>');
-            -webkit-mask-repeat: no-repeat;
-            -webkit-mask-position: center;
-            -webkit-mask-size: contain;
-
-            mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1311" overflow="visible"><text x="5%" y="45%" font-size="900" font-family="Calibri" font-weight="800" text-anchor="right-align" dominant-baseline="middle" fill="white">%2726</text></svg>');
-            mask-repeat: no-repeat;
-            mask-position: right;
-            mask-size: contain;
-        }*/
-        .navbar {
-           background-color: transparent;
-           overflow: hidden; 
-           margin: 0;
-           padding: 0;
-           /*margin-right: 96px;*/
+        html {
+            background-color: #fafafa;
         }
-        .navbar ul{
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: transparent;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar ul {
             display: flex;
             flex-direction: row;
             justify-content: center;
             gap: 60px;
+            padding: 0;
+            margin: 0;
         }
+
         .navbar li {
             list-style: none;
-            /*float: right;*/
-            /*margin-left: 60px;*/
         }
+
         .navbar a {
             color: #fafafa;
             text-decoration: none;
@@ -78,17 +64,57 @@
             font-size: 18px;
             font-weight: 500;
             letter-spacing: 3px;
-            padding: 8px 12px; 
+            padding: 8px 12px;
             display: block;
+            text-align: center;
         }
+
         .navbar a:hover {
             background-color: #fafafa;
-            color:#16181B;
+            color: #16181B;
             border-radius: 4px;
         }
-        html{
-            background-color: #fafafa;
+
+        /* ------------------------ Responsive Styles ------------------------ */
+
+        /* Tablets (768px - 1200px) */
+        @media (max-width: 1200px) {
+            .navbar ul {
+                gap: 40px; /* Decrease the gap between navbar items */
+            }
+
+            .navbar a {
+                font-size: 16px; /* Slightly smaller font for tablets */
+                padding: 6px 10px; /* Adjust padding for smaller screens */
+            }
         }
+
+        /* Tablets Portrait & Mobile Landscape (480px - 767px) */
+        @media (max-width: 767px) {
+            .navbar ul {
+                flex-direction: column; /* Stack navbar items vertically */
+                gap: 20px; /* Space between items */
+                align-items: center; /* Center-align items */
+            }
+
+            .navbar a {
+                font-size: 14px; /* Even smaller font on smaller screens */
+                padding: 10px 20px; /* Adjust padding to fit better on mobile */
+            }
+        }
+
+        /* Mobile Devices (up to 480px) */
+        @media (max-width: 480px) {
+            .navbar ul {
+                gap: 10px; /* Reduce gap further for mobile screens */
+            }
+
+            .navbar a {
+                font-size: 12px; /* Small font size for mobile */
+                padding: 8px 15px; /* Adjust padding to fit the mobile screen better */
+            }
+        }
+
         /* Default Styles (for large screens) */
         h1 {
             color: #fafafa;
