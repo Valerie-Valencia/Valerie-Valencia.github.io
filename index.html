@@ -114,7 +114,7 @@
             }
         }
 
-        /* Tablets and Mobile Devices (up to 1200px) */
+        /* Mobile Devices (up to 1200px) */
         @media (max-width: 1200px) {
             .navbar ul {
                 display: none; /* Hide navbar links initially */
@@ -136,8 +136,12 @@
             /* Show the menu icon on tablets/mobile */
             .menu-icon {
                 display: block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                cursor: pointer;
+                z-index: 10;
             }
-
         }
 
         /* Add styles for the active menu when it's toggled */
