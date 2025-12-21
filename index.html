@@ -299,30 +299,32 @@
             color: white;
         }
         /*NEW*/
-        .carousel-container2{
+        /* Default Styles (for larger screens like monitors) */
+        .carousel-container2 {
             width: 100%;
             max-width: 1755px;
             height: 200px;
             overflow: hidden;
-            /*margin-left: 96px;*/
             margin: 0 auto 90px auto;
             position: relative;
         }
-        .design-logos{
+
+        .design-logos {
             display: flex;
             list-style: none;
-            /*margin-left: 76px;*/
             justify-content: center;
             gap: 45px;
             padding: 0;
             flex-wrap: nowrap;
             background-color: transparent;
         }
-        .design-logos li{
+
+        .design-logos li {
             border-radius: 10px;
             margin: 0 0px;
         }
-        .design-logos a{
+
+        .design-logos a {
             text-decoration: none;
             font-family: "Calibri", sans-serif;
             font-weight: bold;
@@ -333,6 +335,7 @@
             flex-direction: column;
             align-items: center;
         }
+
         .design-logos img {
             width: 100px;
             height: 100px;
@@ -341,22 +344,24 @@
             border-radius: 40px;
             position: relative;
             transition: all 0.3s;
-            
             box-shadow: 
                 24px 24px 18px rgba(0, 0, 0, 0.55),
                 12px 12px 10px rgba(0, 0, 0, 0.35),
                 0px 0px 15px rgba(0, 0, 0, 0.15);
         }
-        .design-logos a span{
+
+        .design-logos a span {
             color: #0a0a0a;
             font-family: "Calibri", sans-serif;
             font-weight: 300;
         }
-        .showcase-item2{
+
+        .showcase-item2 {
             position: relative;
             display: inline-block; 
         }
-        .showcase-item2::after{
+
+        .showcase-item2::after {
             content: '';
             position: absolute;
             top: 0; 
@@ -365,6 +370,83 @@
             height: 100px;
             pointer-events: none;
         }
+
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            /* Tablet Landscape (1024px to 1199px) */
+            .design-logos {
+                gap: 30px; /* Adjust space between items */
+            }
+
+            .design-logos img {
+                width: 90px;  /* Resize images for tablet */
+                height: 90px;
+                margin-top: 20px;
+            }
+
+            .design-logos a {
+                font-size: 16px;  /* Slightly reduce font size */
+            }
+        }
+
+        @media (max-width: 768px) {
+            /* Tablet Portrait and Mobile Landscape (768px to 1023px) */
+            .carousel-container2 {
+                height: 180px;  /* Adjust height for smaller screens */
+                margin-bottom: 60px;  /* Reduce margin at the bottom */
+            }
+
+            .design-logos {
+                gap: 20px;  /* Further reduce the gap */
+                flex-wrap: wrap;  /* Allow wrapping of items */
+                justify-content: space-evenly;  /* Center items */
+            }
+
+            .design-logos img {
+                width: 80px;  /* Adjust image size for smaller screens */
+                height: 80px;
+                margin-top: 15px;
+            }
+
+            .design-logos a {
+                font-size: 14px;  /* Reduce font size for mobile */
+            }
+
+            .showcase-item2::after {
+                width: 80px;  /* Adjust hover effects to fit smaller sizes */
+                height: 80px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            /* Mobile Devices (480px or smaller) */
+            .carousel-container2 {
+                height: 150px;  /* Make carousel even smaller */
+                margin-bottom: 30px;  /* Reduce bottom margin further */
+            }
+
+            .design-logos {
+                gap: 15px;  /* Tighten the gap between items */
+                flex-wrap: wrap;  /* Allow items to wrap onto multiple lines */
+                justify-content: center;  /* Center the items */
+            }
+
+            .design-logos img {
+                width: 60px;  /* Further shrink images for mobile */
+                height: 60px;
+                margin-top: 10px;
+            }
+
+            .design-logos a {
+                font-size: 12px;  /* Smaller font size for mobile */
+            }
+
+            .showcase-item2::after {
+                width: 60px;  /* Adjust hover effect size */
+                height: 60px;
+            }
+        }
+
     </style>
     <body>
         <div class="border-wrapper">
