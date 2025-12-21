@@ -482,45 +482,30 @@
             }
         }
 
-        /* Mobile Devices (up to 480px) */
+       /* Mobile Devices (up to 480px) */
         @media (max-width: 480px) {
             .carousel-container {
-                width: 100%;
+                width: 100%; /* Full width of the container */
+                overflow: hidden; /* Hide overflowing content */
                 height: auto;
-                margin-left: 10px;
-                margin-bottom: 30px;
-            }
-
-            .carousel h2 {
-                padding-left: 10px;
-                line-height: 40px;
-                font-size: 18px;
             }
 
             .case-study-menu {
-                display: flex;
-                margin-left: 10px;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 8px;
+                display: flex; /* Arrange items horizontally */
+                flex-wrap: nowrap; /* Prevent wrapping */
+                transition: transform 0.5s ease-in-out; /* Smooth transition for scrolling */
+            }
+
+            .case-study-menu li {
+                width: 100%; /* Make each item take full width of the container */
             }
 
             .case-study-menu img {
-                width: 90px;
-                height: 90px;
-                margin-top: 10px;
-                border-radius: 20px;
-            }
-
-            .case-study-menu a {
-                font-size: 12px;
-            }
-
-            .showcase-item::after {
-                width: 90px;
-                height: 90px;
+                width: 100%; /* Ensure images are responsive */
+                height: auto;
             }
         }
+
 
         /*.tool-list{
             list-style: none;
