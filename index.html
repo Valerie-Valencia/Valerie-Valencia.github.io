@@ -5,51 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <style>
-        /* General Styles */
         body {
             background-color: #fafafa;
+            /*background: linear-gradient(to right, #16181B 45%, #fafafa 45%);*/
         }
-
-        .border-wrapper {
+        .border-wrapper{
             background-color: #16181B;
             border: 1px solid #fafafa;
+            /*border-top-right-radius: 15%;*/
+            /*border-bottom-right-radius: 50%;*/
             margin: 0;
             padding: 0;
             z-index: 1;
         }
-
-        .outside-content {
+        .outside-content{
+            /*border: 25px solid #16181B;*/
             position: relative;
+            /*width: 100%;*/
             color: #fafafa;
             z-index: 2;
         }
-
-        .second-wrapper {
+        .second-wrapper{
             background-color: #16181B;
             border: 1px solid #fafafa;
             margin: 0;
             padding: 0;
             z-index: 3;
         }
+        /*
+        video {
+            position: absolute;
+            top: 50%;
+            right: 7%;
+            transform: translateY(-50%);
+            width: auto;
+            height: auto;
+            max-width: none;
+            object-fit: none;
 
+            -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1311" overflow="visible"><text x="5%" y="45%" font-size="900" font-family="Calibri" font-weight="800" text-anchor="right-align" dominant-baseline="middle" fill="white">%2726</text></svg>');
+            -webkit-mask-repeat: no-repeat;
+            -webkit-mask-position: center;
+            -webkit-mask-size: contain;
+
+            mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1311" overflow="visible"><text x="5%" y="45%" font-size="900" font-family="Calibri" font-weight="800" text-anchor="right-align" dominant-baseline="middle" fill="white">%2726</text></svg>');
+            mask-repeat: no-repeat;
+            mask-position: right;
+            mask-size: contain;
+        }*/
         .navbar {
-            background-color: transparent;
-            overflow: hidden;
-            margin: 0;
-            padding: 0;
+           background-color: transparent;
+           overflow: hidden; 
+           margin: 0;
+           padding: 0;
+           /*margin-right: 96px;*/
         }
-
-        .navbar ul {
+        .navbar ul{
             display: flex;
             flex-direction: row;
             justify-content: center;
             gap: 60px;
         }
-
         .navbar li {
             list-style: none;
+            /*float: right;*/
+            /*margin-left: 60px;*/
         }
-
         .navbar a {
             color: #fafafa;
             text-decoration: none;
@@ -57,115 +78,116 @@
             font-size: 18px;
             font-weight: 500;
             letter-spacing: 3px;
-            padding: 8px 12px;
+            padding: 8px 12px; 
             display: block;
         }
-
         .navbar a:hover {
             background-color: #fafafa;
-            color: #16181B;
+            color:#16181B;
             border-radius: 4px;
         }
-
-        html {
+        html{
             background-color: #fafafa;
         }
-
-        h1, h2, h3, h4, p {
+        h1{
             color: #fafafa;
             font-family: "Calibri", sans-serif;
-        }
-
-        h1 {
             font-size: 50px;
             font-weight: 500;
             letter-spacing: 2px;
+            line-height: 50px;
             margin-left: 96px;
             margin-top: 0px;
             margin-bottom: 0px;
             padding: 0;
         }
-
-        h2 {
+        h2{
+            color: #fafafa;
+            font-family: "Calibri", sans-serif;
             font-size: 30px;
             font-weight: 300;
             letter-spacing: 5px;
+            line-height: 2px;
             margin-bottom: 0px;
             margin-top: 0;
             padding: 0;
-        }
 
-        h3 {
+        }
+        .carousel{
+            position: relative;      /* needed to stack h2s */
+            width: 100%;  
+            max-width: 800px;          /* adjust for your headings */
+            height: 80px;            /* height of one heading */
+            overflow: hidden;        /* hide other headings */  
+        }
+        .carousel h2{
+            position: absolute;      /* stack on top of each other */
+            margin: 0;
+            width: 100%;
+            opacity: 0;              /* hidden by default */
+            padding-left: 96px;
+            line-height: 70px;
+            transition: opacity 0.5s ease-in-out;  /* fade effect */
+        }
+        .carousel h2.active{
+            opacity: 1;
+        }
+        h3{
             color: #dadada;
+            font-family: "Calibri", sans-serif;
             font-size: 18px;
             font-weight: bold;
             letter-spacing: 2px;
             margin-top: 45px;
             margin-left: 96px;
         }
-
-        h4 {
+        h4{
             color: #16181B;
+            font-family: "Calibri", sans-serif;
+            justify-content: right;
             font-size: 18px;
             font-weight: 300;
             margin-top: 0px;
-            margin-right: 96px;
+            margin-right: 96px; 
             text-align: right;
         }
-
-        p {
-            font-size: 18px;
+        p{
+            color:#fafafa;
+            font-family: "Calibri", sans-serif;
             font-weight: 300;
+            font-size: 18px;
             margin-left: 96px;
             margin-top: 25px;
         }
-
-        .carousel {
-            position: relative;
-            width: 100%;
-            max-width: 800px;
-            height: 80px;
-            overflow: hidden;
-        }
-
-        .carousel h2 {
-            position: absolute;
-            margin: 0;
-            width: 100%;
-            opacity: 0;
-            padding-left: 96px;
-            line-height: 70px;
-            transition: opacity 0.5s ease-in-out;
-        }
-
-        .carousel h2.active {
-            opacity: 1;
-        }
-
-        .carousel-container {
+        .carousel-container{
             width: 720px;
             height: 290px;
+            overflow: hidden;
+            /*overflow-x: hidden;*/
             margin-left: 96px;
             margin-bottom: 90px;
             position: relative;
         }
-
-        .case-study-menu {
+        .case-study-menu{
             display: flex;
             list-style: none;
             margin-left: 76px;
             padding: 0;
             flex-wrap: nowrap;
-            justify-content: center;
-        }
+            background-color: transparent;
+            /*gap: 40px;*/ 
+            /*scroll-behavior: smooth;*/
 
-        .case-study-menu li {
+            /*align-items: flex-start;
+            justify-content: flex-start;*/
+        }
+        .case-study-menu li{
             border-radius: 10px;
             margin: 0 20px;
         }
-
-        .case-study-menu a {
+        .case-study-menu a{
             text-decoration: none;
+            font-family: "Calibri", sans-serif;
             font-weight: bold;
             font-size: 18px;
             text-align: center;
@@ -174,7 +196,6 @@
             flex-direction: column;
             align-items: center;
         }
-
         .case-study-menu img {
             width: 200px;
             height: 200px;
@@ -183,35 +204,127 @@
             border-radius: 40px;
             position: relative;
             transition: all 0.3s;
+            
+            /* Make colors vivid */
             filter: saturate(1.6) contrast(1.15) brightness(1.05);
-            box-shadow: 24px 24px 18px rgba(0, 0, 0, 0.55), 12px 12px 10px rgba(0, 0, 0, 0.35), 0px 0px 15px rgba(0, 0, 0, 0.15);
+            box-shadow: 
+                24px 24px 18px rgba(0, 0, 0, 0.55),
+                12px 12px 10px rgba(0, 0, 0, 0.35),
+                0px 0px 15px rgba(0, 0, 0, 0.15);
         }
-
         .case-study-menu img:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 20px 5px rgba(250, 250, 250, 1);
+            box-shadow: 0 0 20px 5px rgba(250, 250, 250, 1); /* white */
         }
-
-        .case-study-menu a:hover li {
+        .case-study-menu a:hover li{
             box-shadow: 0 0 15px 5px #00DEFF;
         }
-
-        .design-logos {
+        .case-study-menu a span{
+            color: #0a0a0a;
+            font-family: "Calibri", sans-serif;
+            font-weight: 300;
+        }
+        .showcase-item{
+            position: relative;
+            display: inline-block; 
+        }
+        .showcase-item::after{
+            content: '';
+            position: absolute;
+            top: 0; 
+            left: 0;
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+            pointer-events: none;
+        }
+        /*.tool-list{
+            list-style: none;
+            display: flex;
+            margin-top: 0px;
+            margin-right: 86px;
+            padding: 0;
+            background-color: transparent;
+            justify-content: right;
+        }
+        .tool-list li{
+            margin: 0 0px;
+        }
+        .tool-list img{
+            height: 30;
+            width: auto;
+        }*/
+        .overlay {
+            display: none; /* hidden by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            justify-content: center; /* center horizontally */
+            align-items: center;     /* center vertically */
+            z-index: 9999;
+        }
+        .overlay.show {
+            display: flex; /* show overlay */
+        }
+        .overlay-box {
+            background: #111;
+            width: 350px;
+            height: 350px;
+            border-radius: 20px;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 0 25px #ffcc00;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; 
+            transform: scale(0.9);
+            opacity: 0;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            margin: 0; /* remove margin-left to center properly */
+        }
+        .overlay.show .overlay-box {
+            transform: scale(1);
+            opacity: 1;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 28px;
+            cursor: pointer;
+            color: white;
+        }
+        /*NEW*/
+        .carousel-container2{
+            width: 100%;
+            max-width: 1755px;
+            height: 200px;
+            overflow: hidden;
+            /*margin-left: 96px;*/
+            margin: 0 auto 90px auto;
+            position: relative;
+        }
+        .design-logos{
             display: flex;
             list-style: none;
+            /*margin-left: 76px;*/
             justify-content: center;
             gap: 45px;
             padding: 0;
             flex-wrap: nowrap;
+            background-color: transparent;
         }
-
-        .design-logos li {
+        .design-logos li{
             border-radius: 10px;
             margin: 0 0px;
         }
-
-        .design-logos a {
+        .design-logos a{
             text-decoration: none;
+            font-family: "Calibri", sans-serif;
             font-weight: bold;
             font-size: 18px;
             text-align: center;
@@ -220,7 +333,6 @@
             flex-direction: column;
             align-items: center;
         }
-
         .design-logos img {
             width: 100px;
             height: 100px;
@@ -229,112 +341,29 @@
             border-radius: 40px;
             position: relative;
             transition: all 0.3s;
-            box-shadow: 24px 24px 18px rgba(0, 0, 0, 0.55), 12px 12px 10px rgba(0, 0, 0, 0.35), 0px 0px 15px rgba(0, 0, 0, 0.15);
+            
+            box-shadow: 
+                24px 24px 18px rgba(0, 0, 0, 0.55),
+                12px 12px 10px rgba(0, 0, 0, 0.35),
+                0px 0px 15px rgba(0, 0, 0, 0.15);
         }
-
-        .design-logos a span {
+        .design-logos a span{
             color: #0a0a0a;
+            font-family: "Calibri", sans-serif;
             font-weight: 300;
         }
-
-        .showcase-item2::after {
+        .showcase-item2{
+            position: relative;
+            display: inline-block; 
+        }
+        .showcase-item2::after{
             content: '';
             position: absolute;
-            top: 0;
+            top: 0; 
             left: 0;
             width: 100px;
             height: 100px;
             pointer-events: none;
-        }
-
-        /* Media Queries for Responsiveness */
-        @media (max-width: 1200px) {
-            .navbar ul {
-                flex-direction: column;
-                gap: 30px;
-            }
-
-            .carousel-container, .case-study-menu, .design-logos {
-                margin-left: 20px;
-                margin-right: 20px;
-            }
-
-            .carousel-container {
-                width: 100%;
-                max-width: none;
-            }
-
-            .case-study-menu img, .design-logos img {
-                width: 150px;
-                height: 150px;
-            }
-
-            h1 {
-                font-size: 40px;
-                margin-left: 20px;
-            }
-
-            p {
-                margin-left: 20px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .navbar ul {
-                flex-direction: column;
-                gap: 20px;
-            }
-
-            .case-study-menu img, .design-logos img {
-                width: 120px;
-                height: 120px;
-            }
-
-            .carousel-container {
-                margin-left: 20px;
-                margin-right: 20px;
-            }
-
-            h1 {
-                font-size: 30px;
-                margin-left: 20px;
-            }
-
-            h2 {
-                font-size: 24px;
-            }
-
-            .carousel-container {
-                width: 100%;
-                height: 230px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .navbar ul {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .case-study-menu img, .design-logos img {
-                width: 100px;
-                height: 100px;
-            }
-
-            h1 {
-                font-size: 24px;
-                margin-left: 10px;
-            }
-
-            p {
-                font-size: 16px;
-                margin-left: 10px;
-            }
-
-            .carousel-container {
-                width: 100%;
-                height: 200px;
-            }
         }
     </style>
     <body>
