@@ -222,52 +222,53 @@
             }
         }
 
-        .carousel{
-            position: relative;      /* needed to stack h2s */
+        /* Default Styles (Large screens) */
+        .carousel {
+            position: relative;      
             width: 100%;  
-            max-width: 800px;          /* adjust for your headings */
-            height: 80px;            /* height of one heading */
-            overflow: hidden;        /* hide other headings */  
+            max-width: 800px;
+            height: 80px;
+            overflow: hidden;  
         }
-        .carousel h2{
-            position: absolute;      /* stack on top of each other */
+
+        .carousel h2 {
+            position: absolute;
             margin: 0;
             width: 100%;
-            opacity: 0;              /* hidden by default */
+            opacity: 0;              
             padding-left: 96px;
             line-height: 70px;
-            transition: opacity 0.5s ease-in-out;  /* fade effect */
+            transition: opacity 0.5s ease-in-out;
         }
-        .carousel h2.active{
+
+        .carousel h2.active {
             opacity: 1;
         } 
-        .carousel-container{
+
+        .carousel-container {
             width: 720px;
             height: 290px;
             overflow: hidden;
-            /*overflow-x: hidden;*/
             margin-left: 96px;
             margin-bottom: 90px;
             position: relative;
         }
-        .case-study-menu{
+
+        .case-study-menu {
             display: flex;
             list-style: none;
             margin-left: 76px;
             padding: 0;
             flex-wrap: nowrap;
             background-color: transparent;
-            /*gap: 40px;*/ 
-            /*scroll-behavior: smooth;*/
-
-            /*align-items: flex-start;
-            justify-content: flex-start;*/
         }
-        .case-study-menu li{
+
+        .case-study-menu li {
             border-radius: 10px;
             margin: 0 20px;
         }
-        .case-study-menu a{
+
+        .case-study-menu a {
             text-decoration: none;
             font-family: "Calibri", sans-serif;
             font-weight: bold;
@@ -278,6 +279,7 @@
             flex-direction: column;
             align-items: center;
         }
+
         .case-study-menu img {
             width: 200px;
             height: 200px;
@@ -286,31 +288,34 @@
             border-radius: 40px;
             position: relative;
             transition: all 0.3s;
-            
-            /* Make colors vivid */
             filter: saturate(1.6) contrast(1.15) brightness(1.05);
             box-shadow: 
                 24px 24px 18px rgba(0, 0, 0, 0.55),
                 12px 12px 10px rgba(0, 0, 0, 0.35),
                 0px 0px 15px rgba(0, 0, 0, 0.15);
         }
+
         .case-study-menu img:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 20px 5px rgba(250, 250, 250, 1); /* white */
+            box-shadow: 0 0 20px 5px rgba(250, 250, 250, 1);
         }
-        .case-study-menu a:hover li{
+
+        .case-study-menu a:hover li {
             box-shadow: 0 0 15px 5px #00DEFF;
         }
-        .case-study-menu a span{
+
+        .case-study-menu a span {
             color: #0a0a0a;
             font-family: "Calibri", sans-serif;
             font-weight: 300;
         }
-        .showcase-item{
+
+        .showcase-item {
             position: relative;
             display: inline-block; 
         }
-        .showcase-item::after{
+
+        .showcase-item::after {
             content: '';
             position: absolute;
             top: 0; 
@@ -320,6 +325,105 @@
             border-radius: 20px;
             pointer-events: none;
         }
+
+        /* ------------------------ Responsive Styles ------------------------ */
+
+        /* Tablets (768px - 1200px) */
+        @media (max-width: 1200px) {
+            .carousel-container {
+                width: 600px;
+                height: 240px;
+                margin-left: 60px;
+                margin-bottom: 60px;
+            }
+            .carousel h2 {
+                padding-left: 60px;
+                line-height: 60px;
+            }
+            .case-study-menu {
+                margin-left: 40px;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+            .case-study-menu img {
+                width: 160px;
+                height: 160px;
+                margin-top: 20px;
+                border-radius: 30px;
+            }
+            .case-study-menu a {
+                font-size: 16px;
+            }
+        }
+
+        /* Tablets Portrait & Mobile Landscape (480px - 767px) */
+        @media (max-width: 767px) {
+            .carousel-container {
+                width: 100%;
+                height: 200px;
+                margin-left: 20px;
+                margin-bottom: 40px;
+            }
+            .carousel h2 {
+                padding-left: 20px;
+                line-height: 50px;
+                font-size: 20px;
+            }
+            .case-study-menu {
+                margin-left: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+            .case-study-menu img {
+                width: 120px;
+                height: 120px;
+                margin-top: 15px;
+                border-radius: 25px;
+            }
+            .case-study-menu a {
+                font-size: 14px;
+            }
+            .showcase-item::after {
+                width: 120px;
+                height: 120px;
+            }
+        }
+
+        /* Mobile Devices (up to 480px) */
+        @media (max-width: 480px) {
+            .carousel-container {
+                width: 100%;
+                height: 160px;
+                margin-left: 10px;
+                margin-bottom: 30px;
+            }
+            .carousel h2 {
+                padding-left: 10px;
+                line-height: 40px;
+                font-size: 18px;
+            }
+            .case-study-menu {
+                margin-left: 10px;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 8px;
+            }
+            .case-study-menu img {
+                width: 90px;
+                height: 90px;
+                margin-top: 10px;
+                border-radius: 20px;
+            }
+            .case-study-menu a {
+                font-size: 12px;
+            }
+            .showcase-item::after {
+                width: 90px;
+                height: 90px;
+            }
+        }
+
         /*.tool-list{
             list-style: none;
             display: flex;
