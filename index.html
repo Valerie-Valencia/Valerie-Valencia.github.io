@@ -867,6 +867,16 @@
             }
             autoScroll();
         </script>
+        <script>
+            // Get the menu icon and navbar links
+            const menuIcon = document.getElementById("menu-icon");
+            const navbarLinks = document.getElementById("navbar-links");
+
+            // Toggle the "active" class when the menu icon is clicked
+            menuIcon.addEventListener("click", function() {
+                navbarLinks.classList.toggle("active");
+            });
+        </script>
         <div class="outside-content" style="text-align: center;">
             <h2 style="color: #16181B; font-weight: 300; margin-top: 80px; align-content: center;">THE DESIGN TOOLKIT</h2>
             <p style="color: #16181B; text-align: center; margin-left: 0px; margin-right: 0px; margin-top: 25px;">Creating user-centered designs. Lorem ipsum dolor sit amet.</p>
