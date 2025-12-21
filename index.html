@@ -135,12 +135,17 @@
 
             /* Show the menu icon on tablets/mobile */
             .menu-icon {
-                display: block;
+                display: block; /* Show the menu icon on mobile and tablets */
                 position: absolute;
                 top: 20px;
                 right: 20px;
                 cursor: pointer;
                 z-index: 10;
+            }
+
+            .menu-icon img {
+                width: 30px;
+                height: auto;
             }
         }
 
@@ -163,7 +168,6 @@
                 padding: 10px 20px;
             }
         }
-
 
         /* Default Styles (for large screens) */
         h1 {
