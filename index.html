@@ -53,13 +53,14 @@
             margin: 0;
             padding: 0;
             position: relative; /* To position the menu icon */
+            width: 100% /* NEW */
         }
 
         .navbar ul {
             display: flex;
             flex-direction: row;
             justify-content: center;
-            gap: 60px;
+            gap: 3.125vw; /* NEW */
             padding: 0;
             margin: 0;
         }
@@ -72,18 +73,19 @@
             color: #fafafa;
             text-decoration: none;
             font-family: "Calibri", sans-serif;
-            font-size: 18px;
+            font-size: 0.9375vw; /* NEW */
             font-weight: 500;
             letter-spacing: 3px;
-            padding: 8px 12px;
+            padding: 0.417vw 0.625vw;
             display: block;
             text-align: center;
+            gap: 3.125vw; /* NEW */
         }
 
         .navbar a:hover {
             background-color: #fafafa;
             color: #16181B;
-            border-radius: 4px;
+            border-radius: 0.208vw; /* NEW */
         }
 
         /* Hide navbar links on mobile and tablets */
@@ -173,36 +175,36 @@
         h1 {
             color: #fafafa;
             font-family: "Calibri", sans-serif;
-            font-size: 50px;
+            font-size: 2.6042vw;
             font-weight: 500;
-            letter-spacing: 2px;
-            line-height: 50px;
-            margin-left: 96px;
-            margin-top: 0px;
-            margin-bottom: 0px;
+            letter-spacing: 0.1042vw;
+            line-height: 2.6042vw;
+            margin-left: 5vw;
+            margin-top: 0;
+            margin-bottom: 0;
             padding: 0;
         }
 
         h2 {
             color: #fafafa;
             font-family: "Calibri", sans-serif;
-            font-size: 30px;
+            font-size: 1.5625vw;
             font-weight: 300;
-            letter-spacing: 5px;
-            line-height: 2px;
+            letter-spacing: 0.2604vw;
+            line-height: 0.1042vh;
             margin-top: 0;
-            margin-bottom: 0px;
+            margin-bottom: 0;
             padding: 0;
         }
 
         h3 {
             color: #dadada;
             font-family: "Calibri", sans-serif;
-            font-size: 18px;
+            font-size: 0.9375vw;
             font-weight: bold;
-            letter-spacing: 2px;
-            margin-top: 45px;
-            margin-left: 96px;
+            letter-spacing: 0.1042vw;
+            margin-top: 2.344vh;
+            margin-left: 5vw;
         }
 
         h4 {
@@ -220,9 +222,9 @@
             color: #fafafa;
             font-family: "Calibri", sans-serif;
             font-weight: 300;
-            font-size: 18px;
-            margin-left: 96px;
-            margin-top: 25px;
+            font-size: 0.9375vw;
+            margin-left: 5vw;
+            margin-top: 2.315vh;
         }
 
         /* Responsive Styles */
@@ -308,8 +310,8 @@
         .carousel {
             position: relative;
             width: 100%;
-            max-width: 800px;
-            height: 80px;
+            max-width: 41.67vw;
+            height: 7.41vh;
             overflow: hidden;
             touch-action: none; /* Disable touch events that interfere with the scroll */
         }
@@ -319,8 +321,8 @@
             margin: 0;
             width: 100%;
             opacity: 0;
-            padding-left: 96px;
-            line-height: 70px;
+            padding-left: 5vw;
+            line-height: 6.48vh;
             transition: opacity 0.5s ease-in-out;
         }
 
@@ -329,33 +331,33 @@
         }
 
         .carousel-container {
-            width: 720px;
-            height: 290px;
+            width: 37.5vw;
+            height: 26.85vh;
             overflow: hidden;
-            margin-left: 96px;
-            margin-bottom: 90px;
+            margin-left: 5vw;
+            margin-bottom: 8.33vh;
             position: relative;
         }
 
         .case-study-menu {
             display: flex;
             list-style: none;
-            margin-left: 76px;
+            margin-left: 3.96vw;
             padding: 0;
             flex-wrap: nowrap;
             background-color: transparent;
         }
 
         .case-study-menu li {
-            border-radius: 10px;
-            margin: 0 20px;
+            border-radius: 0.521vw;
+            margin: 0 1.042vw;
         }
 
         .case-study-menu a {
             text-decoration: none;
             font-family: "Calibri", sans-serif;
             font-weight: bold;
-            font-size: 18px;
+            font-size: 0.9375vw;
             text-align: center;
             color: #fafafa;
             display: flex;
@@ -364,27 +366,27 @@
         }
 
         .case-study-menu img {
-            width: 200px;
-            height: 200px;
-            margin-top: 30px;
-            margin-bottom: 0px;
-            border-radius: 40px;
+            width: 10.4167vw;
+            height: 18.5185vh;
+            margin-top: 2.778vh;
+            margin-bottom: 0;
+            border-radius: 2.778vw;
             position: relative;
             transition: all 0.3s;
             filter: saturate(1.6) contrast(1.15) brightness(1.05);
             box-shadow:
-                24px 24px 18px rgba(0, 0, 0, 0.55),
-                12px 12px 10px rgba(0, 0, 0, 0.35),
-                0px 0px 15px rgba(0, 0, 0, 0.15);
+                1.25vw 1.25vh 0.8333vw rgba(0, 0, 0, 0.55),
+                0.625vw 0.625vh 0.5208vw rgba(0, 0, 0, 0.35),
+                0 0 1.5625vw rgba(0, 0, 0, 0.15);
         }
 
         .case-study-menu img:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 20px 5px rgba(250, 250, 250, 1);
+            box-shadow: 0 0 1.0417vw 0.2604vw rgba(250, 250, 250, 1);
         }
 
         .case-study-menu a:hover li {
-            box-shadow: 0 0 15px 5px #00DEFF;
+            box-shadow: 0 0 1.0417vw 0.2604vw  #00DEFF;
         }
 
         .case-study-menu a span {
@@ -403,9 +405,9 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 200px;
-            height: 200px;
-            border-radius: 20px;
+            width: 10.4167vw;
+            height: 18.5185vh;
+            border-radius: 1.042vw;
             pointer-events: none;
         }
 
@@ -735,8 +737,8 @@
                     <li><a href="#contact">CONTACT</a></li>
                 </ul>
             </nav>
-            <img src="Portfolio Logo.png" alt="Portfolio Logo" style="width: 75px; height: 80px; margin-left: 225px; margin-top: 10px; margin-bottom: 12px;">
-            <h2 style="margin-bottom: 0px; margin-left: 96px; margin-top: 5px;">I'M VALERIE VALENCIA,</h2>
+            <img src="Portfolio Logo.png" alt="Portfolio Logo" style="width: 3.90625vw; height: 4.16667vh; margin-left: 11.719vw; margin-top: 0.926vh; margin-bottom: 1.111vh;"> 
+            <h2 style="margin-bottom: 0px; margin-left: 5vw; margin-top: 0.463vw;">I'M VALERIE VALENCIA,</h2>
             <div class="carousel">
                 <h2 class="active">AN USER EXPERIENCE DESIGNER</h2>
                 <h2>AN USER INTERFACE DESIGNER</h2>
