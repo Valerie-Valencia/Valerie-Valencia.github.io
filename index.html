@@ -138,19 +138,16 @@
 
             /* Show the menu icon on tablets/mobile */
             .menu-icon {
-                display: block; /* Show the menu icon on mobile and tablets */
+                display: block; /* Ensure it's displayed */
                 position: absolute;
                 top: 20px;
                 right: 20px;
                 cursor: pointer;
-                z-index: 10;
+                z-index: 999; /* Increase z-index to make sure it stays on top */
             }
 
-            .menu-icon img {
-                width: 30px;
-                height: auto;
-            }
         }
+
 
         /* Add styles for the active menu when it's toggled */
         .navbar ul.active {
