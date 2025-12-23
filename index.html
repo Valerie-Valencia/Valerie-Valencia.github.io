@@ -210,13 +210,14 @@
         h4 {
             color: #16181B;
             font-family: "Calibri", sans-serif;
-            justify-content: right;
-            font-size: 18px;
             font-weight: 300;
-            margin-top: 0px;
-            margin-right: 96px;
             text-align: right;
+
+            font-size: 0.94vw;       /* 18px / 1920 */
+            margin-top: 0;
+            margin-right: 5vw;      /* 96px / 1920 */
         }
+
 
         p {
             color: #fafafa;
@@ -575,33 +576,36 @@
         /* Default Styles (for larger screens like monitors) */
         .carousel-container2 {
             width: 100%;
-            max-width: 1790px;
-            height: 250px;
+            max-width: 93.23vw;        /* 1790px / 1920 */
+            height: 23.15vh;           /* 250px / 1080 */
             overflow: hidden;
-            margin: 0 auto 90px auto;
+            margin: 0 auto 8.33vh auto; /* 90px / 1080 */
             position: relative;
         }
+
 
         .design-logos {
             display: flex;
             list-style: none;
             justify-content: center;
-            gap: 45px;
+            gap: 2.34vw;     /* 45px / 1920 */
             padding: 0;
             flex-wrap: nowrap;
             background-color: transparent;
         }
 
+
         .design-logos li {
-            border-radius: 10px;
-            margin: 0 0px;
+            border-radius: 0.52vw; /* 10px / 1920 */
+            margin: 0;
         }
+
 
         .design-logos a {
             text-decoration: none;
             font-family: "Calibri", sans-serif;
             font-weight: bold;
-            font-size: 18px;
+            font-size: 0.94vw; /* 18px / 1920 */
             text-align: center;
             color: #fafafa;
             display: flex;
@@ -609,19 +613,21 @@
             align-items: center;
         }
 
+
         .design-logos img {
-            width: 150px;
-            height: 150px;
-            margin-top: 30px;
-            margin-bottom: 0px;
-            border-radius: 40px;
+            width: 7.81vw;        /* 150px / 1920 */
+            height: 13.89vh;      /* 150px / 1080 */
+            margin-top: 2.78vh;   /* 30px / 1080 */
+            margin-bottom: 0;
+            border-radius: 2.08vw; /* 40px / 1920 */
             position: relative;
             transition: all 0.3s;
-            box-shadow: 
-                24px 24px 18px rgba(0, 0, 0, 0.55),
-                12px 12px 10px rgba(0, 0, 0, 0.35),
-                0px 0px 15px rgba(0, 0, 0, 0.15);
+            box-shadow:
+                1.25vw 1.25vh 0.83vw rgba(0, 0, 0, 0.55),
+                0.63vw 0.63vh 0.52vw rgba(0, 0, 0, 0.35),
+                0 0 1.56vw rgba(0, 0, 0, 0.15);
         }
+
 
         .design-logos a span {
             color: #0a0a0a;
@@ -629,18 +635,19 @@
             font-weight: 300;
         }
 
+
         .showcase-item2 {
             position: relative;
-            display: inline-block; 
+            display: inline-block;
         }
 
         .showcase-item2::after {
             content: '';
             position: absolute;
-            top: 0; 
+            top: 0;
             left: 0;
-            width: 100px;
-            height: 100px;
+            width: 5.21vw;   /* 100px / 1920 */
+            height: 9.26vh;  /* 100px / 1080 */
             pointer-events: none;
         }
 
@@ -891,8 +898,8 @@
             });
         </script>
         <div class="outside-content" style="text-align: center;">
-            <h2 style="color: #16181B; font-weight: 300; margin-top: 80px; align-content: center;">THE DESIGN TOOLKIT</h2>
-            <p style="color: #16181B; text-align: center; margin-left: 0px; margin-right: 0px; margin-top: 25px;">Creating user-centered designs. Lorem ipsum dolor sit amet.</p>
+            <h2 style="color: #16181B; font-weight: 300; margin-top: 7.41vh; align-content: center;">THE DESIGN TOOLKIT</h2>
+            <p style="color: #16181B; text-align: center; margin-left: 0; margin-right: 0; margin-top: 2.31vh;">Creating user-centered designs. Lorem ipsum dolor sit amet.</p>
             <div class="carousel-container2">
                 <ul class="design-logos">
                 <li>
