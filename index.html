@@ -116,7 +116,24 @@
                 display: none; /* Hide the menu icon on desktop */
             }
         }
-
+        
+        /* Tablets (768px - 1200px)*/
+        @media (max-width: 1200px) {
+            .menu-icon {
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                cursor: pointer;
+                z-index: 10;
+            }
+            
+            .menu-icon img {
+                width: 30px;
+                height: auto;
+            }
+        }
+        
         /* Mobile Devices (up to 1200px) */
         @media (max-width: 1200px) {
             .navbar ul {
