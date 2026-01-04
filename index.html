@@ -235,7 +235,6 @@
             margin-right: 5vw;      /* 96px / 1920 */
         }
 
-
         p {
             color: #fafafa;
             font-family: "Calibri", sans-serif;
@@ -499,9 +498,9 @@
             .case-study-menu {
                 display: flex;
                 margin-left: 2.6vw;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 1.3vw;
+                flex-wrap: nowrap;
+                list-style: none;
+                background-color: transparent;
             }
 
             .case-study-menu img {
@@ -512,12 +511,7 @@
             }
 
             .case-study-menu a {
-                font-size: 1.82vw;
-            }
-
-            .showcase-item::after {
-                width: 15.63vw;
-                height: 15.63vw;
+                font-size: 1rem;
             }
         }
 
