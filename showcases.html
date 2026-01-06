@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        /* Base Styles */
+        body {
+            background-color: #fafafa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .border-wrapper {
+            background-color: #16181B;
+            border: 5px solid #fafafa;
+            margin: 0;
+            padding: 0;
+            z-index: 1;
+
+            /* Make the border-wrapper take up the full height of the viewport */
+            height: 99vh;
+            /* Ensure content inside the wrapper is properly spaced */
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .outside-content {
+            position: relative;
+            color: #fafafa;
+            border: 5px solid #fafafa;
+            z-index: 2;
+        }
+
+        .second-wrapper {
+            background-color: #16181B;
+            border: 5px solid #fafafa;
+            margin: 0;
+            padding: 0;
+            z-index: 3;
+        }
+
+        html {
+            background-color: #fafafa;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: transparent;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            position: relative; /* To position the menu icon */
+            width: 100% /* NEW */
+        }
+
+        .navbar ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 3.125vw; /* NEW */
+            padding: 0;
+            margin: 0;
+        }
+
+        .navbar li {
+            list-style: none;
+        }
+
+        .navbar a {
+            color: #fafafa;
+            text-decoration: none;
+            font-family: "Calibri", sans-serif;
+            margin-top: 2.926vh;
+            font-size: 0.9375vw; /* NEW */
+            font-weight: 500;
+            letter-spacing: 3px;
+            padding: 0.417vw 0.625vw;
+            display: block;
+            text-align: center;
+            gap: 3.125vw; /* NEW */
+        }
+
+        .navbar a:hover {
+            background-color: #fafafa;
+            color: #16181B;
+            border-radius: 0.208vw; /* NEW */
+        }
+
+        /* Hide navbar links on mobile and tablets */
+        .menu-icon {
+            display: none; /* Hidden on larger screens */
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .menu-icon img {
+            width: 30px;
+            height: auto;
+        }
+
+        /* ------------------------ Responsive Styles ------------------------ */
+
+        /* Desktop: Show the navbar */
+        @media (min-width: 1201px) {
+            .navbar ul {
+                display: flex;
+            }
+
+            .menu-icon {
+                display: none; /* Hide the menu icon on desktop */
+            }
+        }
+        
+        /* Tablets (768px - 1200px)*/
+        @media (max-width: 1200px) {
+            .menu-icon {
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                cursor: pointer;
+                z-index: 10;
+            }
+            
+            .menu-icon img {
+                width: 30px;
+                height: auto;
+            }
+        }
+        
+        /* Mobile Devices (up to 1200px) */
+        @media (max-width: 1200px) {
+            .navbar ul {
+                display: none; /* Hide navbar links initially */
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                top: 60px; /* Position the menu below the menu icon */
+                right: 0;
+                background-color: #16181B;
+                width: 100%;
+                padding: 20px 0;
+            }
+
+            .navbar a {
+                font-size: 16px;
+                padding: 8px 15px;
+            }
+
+            /* Show the menu icon on tablets/mobile */
+            .menu-icon {
+                display: block; /* Ensure it's displayed */
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                cursor: pointer;
+                z-index: 999; /* Increase z-index to make sure it stays on top */
+            }
+
+        }
+
+
+        /* Add styles for the active menu when it's toggled */
+        .navbar ul.active {
+            display: flex !important; /* Forces the navbar to be shown */
+            flex-direction: column;
+            position: absolute;
+            top: 60px; /* Position the menu below the menu icon */
+            right: 0;
+            background-color: #16181B;
+            width: 100%;
+            padding: 20px 0;
+        }
+
+        /* Mobile Devices (up to 480px) */
+        @media (max-width: 480px) {
+            .navbar a {
+                font-size: 14px;
+                padding: 10px 20px;
+            }
+        }
+
+        /* Default Styles (for large screens) */
+        h1 {
+            color: #fafafa;
+            font-family: "Calibri", sans-serif;
+            font-size: 2.6042vw;
+            font-weight: 500;
+            letter-spacing: 0.1042vw;
+            line-height: 2.6042vw;
+            margin-left: 5vw;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding: 0;
+        }
+
+        h2 {
+            color: #fafafa;
+            font-family: "Calibri", sans-serif;
+            font-size: 1.5625vw;
+            font-weight: 300;
+            letter-spacing: 0.2604vw;
+            line-height: 2.6042vw;
+            margin-top: 1.41vh;
+            margin-left: 5vw;
+            margin-bottom: 0;
+            padding: 0;
+            /*align-content: center;*/
+        }
+
+        h3 {
+            color: #dadada;
+            font-family: "Calibri", sans-serif;
+            font-size: 0.9375vw;
+            font-weight: bold;
+            letter-spacing: 0.1042vw;
+            margin-top: 4.344vh;
+            margin-left: 5vw;
+        }
+
+        h4 {
+            color: #16181B;
+            font-family: "Calibri", sans-serif;
+            font-weight: 300;
+            text-align: right;
+
+            font-size: 0.94vw;       /* 18px / 1920 */
+            margin-top: 0;
+            margin-right: 5vw;      /* 96px / 1920 */
+        }
+
+        p {
+            color: #fafafa;
+            font-family: "Calibri", sans-serif;
+            font-weight: 300;
+            font-size: 0.9375vw;
+            margin-left: 5vw;
+            margin-top: 2.315vh;
+        }
+
+        /* Responsive Styles */
+
+        /* Tablets (768px - 1200px)*/
+        @media (max-width: 1200px) {
+            h1 {
+                font-size: 3.63vw;
+                line-height: 4.63vw;
+                margin-left: 5vw;
+                margin-top: 1vh;
+            }
+            h2 {
+                font-size: 2.63vw;
+                letter-spacing: 0.46vw;
+                line-height: 4.63vw;
+                margin-left: 5vw;
+            }
+            h3 {
+                font-size: 1vw;
+                margin-left: 5vw;
+                margin-top: 2vh;
+            }
+            h4 {
+                font-size: 0.48vw;
+                margin-right: 5.56vw;
+            }
+            p {
+                font-size: 1rem;
+                margin-left: 5vw;
+            }
+        }
+
+        /* Tablets Portrait & Mobile Landscape (480px - 767px) */
+        @media (max-width: 767px) {
+            h1 {
+                font-size: 5.17vw;
+                line-height: 4.95vw;
+                margin-left: 5vw;
+                margin-top: 1vh;
+            }
+            h2 {
+                font-size: 4.17vw;
+                letter-spacing: 0.26vw;
+                margin-left: 5vw;
+                line-height: 4.63vw;
+            }
+            h3 {
+                font-size: 1.82vw;
+                margin-left: 5vw;
+            }
+            h4 {
+                font-size: 2.82vw;
+                margin-right: 5.21vw;
+            }
+            p {
+                font-size: 2vw;
+                margin-left: 5vw;
+            }
+        }
+
+        /* Mobile Devices (up to 480px) */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 5.83vw;
+                line-height: 6.67vw;
+                margin-left: 5vw;
+                margin-top: 0.50vh;
+            }
+            h2 {
+                font-size: 4.83vw;
+                letter-spacing: 0.31vw;
+                margin-left: 5vw;
+                align-content: center;
+            }
+            h3 {
+                font-size: 2.5vw;
+                margin-left: 5vw;
+            }
+            h4 {
+                font-size: 2.5vw;
+                margin-right: 4.17vw;
+            }
+            p {
+                font-size: 2.5vw;
+                margin-left: 5vw;
+            }
+        }
+
+    </style>
+    <body>
+         <div class="border-wrapper">
+            <!--<div class="video-mask">
+            <video src="171942-846113545_tiny.mp4" autoplay muted loop style="filter: hue-rotate(210deg);"></video>
+            </div> -->
+            <nav class="navbar">
+                <div class="menu-icon" id="menu-icon">
+                    <img src="menuicon.png" alt="Menu Icon" />
+                </div>
+                <ul id="navbar-links">
+                    <li><a href="#index">HOME</a></li>
+                    <li><a href="#showcases">SHOWCASES</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+    </body>
