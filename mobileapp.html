@@ -331,6 +331,22 @@
             }
         }
 
+        .two-column{
+            display: flex;
+            gap: 40;
+        }
+
+        .left-side{
+            flex: 1;
+        }
+
+        .mobileapp-img{
+            margin-top: 18vh;
+            margin-right: 5vw;
+            width: 25vw;
+            height: 75vh;
+        }
+
         .insight-btn{
             background-color: #444444;
             color: white;
@@ -359,13 +375,6 @@
                 0 0 1.56vw rgba(0, 0, 0, 0.15);
         }
 
-        .mobileapp-img{
-            margin-top: 18vh;
-            margin-left: 30vw;
-            width: 25vw;
-            height: 75vh;
-        }
-
     </style>
     <body>
          <div class="border-wrapper">
@@ -383,21 +392,28 @@
                     <li><a href="contact.html">CONTACT</a></li>
                 </ul>
             </nav>
-            <img class="mobileapp-img" src="smartphone-153650_1280.png" alt="">
-            <h3 style="margin-top: 28vh; font-weight: 300;">ANDROID MOBILE APPLICATION:</h3>
-            <h1 style="margin-top: 0.10vh; font-weight: 300;">WALLET+ REDESIGN</h1>
-             <p>Creating user-centered designs. Lorem ipsum dolor sit amet, <br>
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt <br>
-                quis nostrud exercitation ullamco laboris nisi ut aliquip. <br>
-                Creating user-centered designs. Lorem ipsum dolor sit amet, <br>
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt <br>
-                quis nostrud exercitation ullamco laboris nisi ut aliquip. <br>
-            </p>
-            <button class="insight-btn">INSIGHTS & MORE</button>
-            <div class="table-box">
-                <ul id="content">
-                    <h3 style="margin-left: 0.05vw; font-weight: 300; margin-top: 1vh;">TIMELINE</h3>
-                    <li></li>
-                </ul>
+            <div class="two-column">
+                <div class="left-side">
+                    <h3 style="margin-top: 28vh; font-weight: 300;">ANDROID MOBILE APPLICATION:</h3>
+                    <h1 style="margin-top: 0.10vh; font-weight: 300;">WALLET+ REDESIGN</h1>
+                    <p>Creating user-centered designs. Lorem ipsum dolor sit amet, <br>
+                        consectetur adipiscing elit, sed do eiusmod tempor incididunt <br>
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip. <br>
+                        Creating user-centered designs. Lorem ipsum dolor sit amet, <br>
+                        consectetur adipiscing elit, sed do eiusmod tempor incididunt <br>
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip. <br>
+                    </p>
+                    <button class="insight-btn">INSIGHTS & MORE</button>
+                    <div class="table-box">
+                        <ul id="content">
+                            <h3 style="margin-left: 0.05vw; font-weight: 300; margin-top: 1vh;">TIMELINE</h3>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right-side">
+                    <img class="mobileapp-img" src="smartphone-153650_1280.png" alt="">
+                </div>
             </div>
+         </div>
     </body>
