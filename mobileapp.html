@@ -358,7 +358,44 @@
             border: none;
         }
         
-        /*Tablet Landscape*/
+        .insight-btn:hover{
+            background-color: white;
+            color: black;
+        }
+
+        .table-box{
+            width: 12vw;
+            height: 25vh;
+            background-color: #16181B;
+            margin-left: 5vw;
+            margin-top: 4vh;
+            box-shadow:
+                1.25vw 1.25vh 0.83vw rgba(0, 0, 0, 0.55),
+                0.63vw 0.63vh 0.52vw rgba(0, 0, 0, 0.35),
+                0 0 1.56vw rgba(0, 0, 0, 0.15);
+        }
+        
+        .subtitle{
+            font-weight: 300;
+            margin-top: 25vh;
+        }
+
+        .title{
+            font-weight: 300;
+            margin-top: 0.10vh;
+        }
+
+        .role-details{
+            font-weight: 300;
+            margin-top: 0.25vh;
+        }
+/*
+        .project-description{
+            font-weight: 300;
+            margin-top: 0.10vh;
+        }
+*/
+         /*Tablet Landscape*/
         @media (max-width: 1200px){
             .insight-btn{
                 background-color: #444444;
@@ -386,6 +423,20 @@
         
         /*Tablet Portrait & Mobile Landscape*/
         @media (max-width: 767px){
+
+            .two-column{
+
+            }
+
+            .left-side,
+            .right-side{
+                width: 50%; 
+            }
+
+            .mobileapp-img{
+
+            }
+
             .insight-btn{
                 background-color: #444444;
                 color: white;
@@ -400,6 +451,41 @@
         
         /*Mobile Devices*/
         @media (max-width: 480px){
+
+            .subtitle{
+                font-weight: 300;
+                margin-top: 0.10vh;
+            }
+
+            .title{
+                font-weight: 300;
+                margin-top: 0.10vh;
+            }
+
+            .role-details{
+                font-weight: 300;
+                margin-top: 0.10vh;
+            }
+
+            .project-description{
+                font-weight: 300;
+                margin-top: 0.10vh;
+            }
+
+            .two-column{
+                flex-direction: column-reverse;
+            }
+
+            .left-side,
+            .right-side{
+                height: 50%; 
+                text-align: center;
+            }
+
+            .mobileapp-img{
+                width: 50%;
+            }
+            
             .insight-btn{
                 background-color: #444444;
                 color: white;
@@ -412,30 +498,6 @@
             }
         }
         
-        .insight-btn:hover{
-            background-color: white;
-            color: black;
-        }
-
-        .table-box{
-            width: 12vw;
-            height: 25vh;
-            background-color: #16181B;
-            margin-left: 5vw;
-            margin-top: 4vh;
-            box-shadow:
-                1.25vw 1.25vh 0.83vw rgba(0, 0, 0, 0.55),
-                0.63vw 0.63vh 0.52vw rgba(0, 0, 0, 0.35),
-                0 0 1.56vw rgba(0, 0, 0, 0.15);
-        }
-        
-        @media (max-width: 480px){
-            .mobileapp-img{
-                align-content: center;
-                height: 35vh;
-                width: 18vw;
-            }
-        }
 
     </style>
     <body>
@@ -456,15 +518,15 @@
             </nav>
             <div class="two-column">
                 <div class="left-side">
-                    <h3 style="margin-top: 25vh; font-weight: 300;">ANDROID MOBILE APPLICATION:</h3>
-                    <h1 style="margin-top: 0.10vh; font-weight: 300;">WALLET+ REDESIGN</h1>
-                    <h3 style="margin-top: 0.25vh; font-weight: 300;"><b>ROLE: </b>SOLO</h3>
-                    <p>Creating user-centered designs. Lorem ipsum dolor sit amet, <br>
+                    <h3 class="subtitle">ANDROID MOBILE APPLICATION:</h3>
+                    <h1 class="title">WALLET+ REDESIGN</h1>
+                    <h3 class="role-details"><b>ROLE: </b>SOLO</h3>
+                    <p class="project-description">Creating user-centered designs. Lorem ipsum dolor sit amet, <br>
                         consectetur adipiscing elit, sed do eiusmod tempor incididunt <br>
                         quis nostrud exercitation ullamco laboris nisi ut aliquip. <br>
                         Creating user-centered designs. Lorem ipsum dolor sit amet.
                     </p>
-                    <h3 style="margin-top: 0.10vh; font-weight: 300;"><b>TOOLS USED: </b>Figjam, Figma,</h3>
+                    <h3 class="role-details"><b>TOOLS USED: </b>Figjam, Figma,</h3>
                     <button class="insight-btn">INSIGHTS & MORE</button>
                     <div class="table-box">
                         <ul id="content">
