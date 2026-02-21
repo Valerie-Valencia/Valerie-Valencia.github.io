@@ -5,65 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <style>
-        /* Base Styles */
-        body {
+       /* =========================
+        Base Styles
+        ========================= */
+        html, body {
             background-color: #fafafa;
             margin: 0;
             padding: 0;
         }
 
-        .border-wrapper {
-            background-color: #16181B;
-            border: 5px solid #fafafa;
-            margin: 0;
-            padding: 0;
-            z-index: 1;
-            height: 100dvh;
-            display: flex;
-            flex-direction: column;
-            box-sizing: border-box;
-            overflow: hidden;
+        body {
+            font-family: "Calibri", sans-serif;
+            color: #fafafa;
         }
 
-        .outside-content {
-            position: relative;
-            color: #fafafa;
-            border: 5px solid #fafafa;
-            z-index: 2;
-        }
-
-        .second-wrapper {
-            background-color: #16181B;
-            border: 5px solid #fafafa;
-            margin: 0;
-            padding: 0;
-            z-index: 3;
-        }
-        
-        .second-outside-content {
-            position: relative;
-            color: #fafafa;
-            border: 5px solid #fafafa;
-            z-index: 4;
-        }
-        
+        .border-wrapper,
+        .second-wrapper,
         .third-wrapper {
             background-color: #16181B;
             border: 5px solid #fafafa;
             margin: 0;
             padding: 0;
-            z-index: 5;
+            box-sizing: border-box;
         }
-        
+
+        .outside-content,
+        .second-outside-content,
         .third-outside-content {
             position: relative;
             color: #fafafa;
             border: 5px solid #fafafa;
-            z-index: 6;
-        }
-
-        html {
-            background-color: #fafafa;
         }
 
         .navbar {
@@ -72,16 +43,20 @@
             margin: 0;
             padding: 0;
             position: relative;
-            width: 100% 
+            width: 100%;
         }
 
         .navbar ul {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            gap: 3.125vw; 
-            padding: 0;
-            margin: 0;
+            display: none; /* Mobile default */
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            background-color: #16181B;
+            width: 100%;
+            padding: 20px 0;
+            gap: 0;
         }
 
         .navbar li {
@@ -91,15 +66,13 @@
         .navbar a {
             color: #fafafa;
             text-decoration: none;
-            font-family: "Calibri", sans-serif;
-            margin-top: 2.926vh;
-            font-size: 0.9375vw; 
             font-weight: 500;
-            letter-spacing: 3px;
-            padding: 0.417vw 0.625vw;
+            margin-top: 2.926vh;
+            font-size: 16px;
+            padding: 8px 15px;
             display: block;
             text-align: center;
-            gap: 3.125vw; 
+            letter-spacing: 3px;
         }
 
         .navbar a:hover {
@@ -109,12 +82,12 @@
         }
 
         .menu-icon {
-            display: none; 
+            display: block;
             position: absolute;
             top: 20px;
             right: 20px;
             cursor: pointer;
-            z-index: 10;
+            z-index: 999;
         }
 
         .menu-icon img {
@@ -122,525 +95,160 @@
             height: auto;
         }
 
-        /* ------------------------ Responsive Styles ------------------------ */
+        .navbar ul.active {
+            display: flex !important;
+            flex-direction: column;
+        }
 
-        /* Desktop: Show the navbar */
+        /* Typography */
+        h1 {
+            font-size: 5.83vw;
+            line-height: 6.67vw;
+            margin: 0.5vh 0 0 5vw;
+            font-weight: 400;
+        }
+
+        h2 {
+            font-size: 4.83vw;
+            letter-spacing: 0.31vw;
+            margin-left: 5vw;
+            font-weight: 300;
+        }
+
+        h3 {
+            font-size: 2.5vw;
+            margin-left: 5vw;
+            margin-top: 0.25vh;
+            font-weight: bold;
+        }
+
+        h4 {
+            font-size: 2.5vw;
+            margin-right: 4.17vw;
+            font-weight: 300;
+            text-align: right;
+        }
+
+        p {
+            font-size: 2.5vw;
+            margin-left: 5vw;
+            font-weight: 300;
+        }
+
+        /* Layout */
+        .two-column {
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 0;
+        }
+
+        .left-side,
+        .right-side {
+            width: 100%;
+            height: 50%;
+            text-align: center;
+        }
+
+        .mobileapp-img {
+            width: 44%;
+            height: 70%;
+            display: block;
+            margin: 15vh auto 5vh;
+        }
+
+        .insight-btn {
+            background-color: #444444;
+            color: white;
+            font-size: 1rem;
+            width: 9vw;
+            height: 5vh;
+            margin: 2vh auto 0;
+            border: none;
+            visibility: hidden;
+        }
+
+        .table-box {
+            width: 100vw;
+            height: 15vh;
+            background-color: #16181B;
+            margin: 4vh 5vw 0 5vw;
+            visibility: hidden;
+            box-shadow:
+                1.25vw 1.25vh 0.83vw rgba(0,0,0,0.55),
+                0.63vw 0.63vh 0.52vw rgba(0,0,0,0.35),
+                0 0 1.56vw rgba(0,0,0,0.15);
+        }
+
+        .tool-box {
+            width: 65vw;
+            height: 85vh;
+            background-color: #fafafa;
+            margin: 2vh auto;
+            box-shadow:
+                1.25vw 1.25vh 0.83vw rgba(0,0,0,0.25),
+                0.63vw 0.63vh 0.52vw rgba(0,0,0,0.18),
+                0 0 1.56vw rgba(0,0,0,0.08);
+        }
+
+        .subtitle,
+        .title,
+        .role-details,
+        .project-description {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* =========================
+        Tablet (768px - 1200px)
+        ========================= */
+        @media (min-width: 768px) and (max-width: 1200px) {
+
+            /* Navbar */
+            .navbar ul {
+                display: none;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+
+            /* Typography */
+            h1 { font-size: 3.63vw; line-height: 4.63vw; margin-top: 1vh; }
+            h2 { font-size: 2.63vw; letter-spacing: 0.46vw; line-height: 4.63vw; }
+            h3 { font-size: 1vw; margin-top: 2vh; }
+            h4 { font-size: 0.48vw; margin-right: 5.56vw; }
+            p { font-size: 1rem; }
+
+            /* Layout */
+            .mobileapp-img { margin-right: 5vw; width: 20vw; height: 65vh; }
+            .insight-btn { width: 25vw; }
+            .table-box { width: 50vw; height: 15vh; }
+        }
+
+        /* =========================
+        Desktop (1201px+)
+        ========================= */
         @media (min-width: 1201px) {
             .navbar ul {
                 display: flex;
             }
-
             .menu-icon {
-                display: none; /* Hide the menu icon on desktop */
-            }
-        }
-        
-        /* Tablets (768px - 1200px)*/
-        @media (max-width: 1200px) {
-            .menu-icon {
-                display: block;
-                position: absolute;
-                top: 20px;
-                right: 20px;
-                cursor: pointer;
-                z-index: 10;
-            }
-            
-            .menu-icon img {
-                width: 30px;
-                height: auto;
-            }
-        }
-        
-        /* Mobile Devices (up to 1200px) */
-        @media (max-width: 1200px) {
-            .navbar ul {
-                display: none; /* Hide navbar links initially */
-                flex-direction: column;
-                align-items: center;
-                position: absolute;
-                top: 60px; /* Position the menu below the menu icon */
-                right: 0;
-                background-color: #16181B;
-                width: 100%;
-                padding: 20px 0;
+                display: none;
             }
 
-            .navbar a {
-                font-size: 16px;
-                padding: 8px 15px;
-            }
+            /* Typography */
+            h1 { font-size: 2.6042vw; line-height: 2.6042vw; }
+            h2 { font-size: 1.5625vw; line-height: 2.6042vw; }
+            h3 { font-size: 0.9375vw; margin-top: 4.344vh; }
+            h4 { font-size: 0.94vw; }
+            p { font-size: 0.9375vw; }
 
-            /* Show the menu icon on tablets/mobile */
-            .menu-icon {
-                display: block; /* Ensure it's displayed */
-                position: absolute;
-                top: 20px;
-                right: 20px;
-                cursor: pointer;
-                z-index: 999; /* Increase z-index to make sure it stays on top */
-            }
-
-        }
-
-
-        /* Add styles for the active menu when it's toggled */
-        .navbar ul.active {
-            display: flex !important; /* Forces the navbar to be shown */
-            flex-direction: column;
-            position: absolute;
-            top: 60px; /* Position the menu below the menu icon */
-            right: 0;
-            background-color: #16181B;
-            width: 100%;
-            padding: 20px 0;
-        }
-
-        /* Mobile Devices (up to 480px) */
-        @media (max-width: 480px) {
-            .navbar a {
-                font-size: 14px;
-                padding: 10px 20px;
-            }
-        }
-
-        /* Default Styles (for large screens) */
-        h1 {
-            color: #fafafa;
-            font-family: "Calibri", sans-serif;
-            font-size: 2.6042vw;
-            font-weight: 500;
-            letter-spacing: 0.1042vw;
-            line-height: 2.6042vw;
-            margin-left: 5vw;
-            margin-top: 0;
-            margin-bottom: 0;
-            padding: 0;
-        }
-
-        h2 {
-            color: #fafafa;
-            font-family: "Calibri", sans-serif;
-            font-size: 1.5625vw;
-            font-weight: 300;
-            letter-spacing: 0.2604vw;
-            line-height: 2.6042vw;
-            margin-top: 1.41vh;
-            margin-left: 5vw;
-            margin-bottom: 0;
-            padding: 0;
-            /*align-content: center;*/
-        }
-
-        h3 {
-            color: #fafafa;
-            font-family: "Calibri", sans-serif;
-            font-size: 0.9375vw;
-            font-weight: bold;
-            letter-spacing: 0.1042vw;
-            margin-top: 4.344vh;
-            margin-left: 5vw;
-        }
-
-        h4 {
-            color: #fafafa;
-            font-family: "Calibri", sans-serif;
-            font-weight: 300;
-            text-align: right;
-            font-size: 0.94vw;       /* 18px / 1920 */
-            margin-top: 0;
-            margin-left: 5vw;      /* 96px / 1920 */
-        }
-
-        p {
-            color: #fafafa;
-            font-family: "Calibri", sans-serif;
-            font-weight: 300;
-            font-size: 0.9375vw;
-            margin-left: 5vw;
-            margin-top: 2.315vh;
-        }
-
-        /* Responsive Styles */
-
-        /* Tablets (768px - 1200px)*/
-        @media (max-width: 1200px) {
-            h1 {
-                font-size: 3.63vw;
-                line-height: 4.63vw;
-                margin-left: 5vw;
-                margin-top: 1vh;
-            }
-            h2 {
-                font-size: 2.63vw;
-                letter-spacing: 0.46vw;
-                line-height: 4.63vw;
-                margin-left: 5vw;
-            }
-            h3 {
-                font-size: 1vw;
-                margin-left: 5vw;
-                margin-top: 2vh;
-            }
-            h4 {
-                font-size: 0.48vw;
-                margin-right: 5.56vw;
-            }
-            p {
-                font-size: 1rem;
-                margin-left: 5vw;
-            }
-        }
-
-        /* Tablets Portrait & Mobile Landscape (480px - 767px) */
-        @media (max-width: 767px) {
-            h1 {
-                font-size: 5.17vw;
-                line-height: 4.95vw;
-                margin-left: 5vw;
-                margin-top: 1vh;
-            }
-            h2 {
-                font-size: 4.17vw;
-                letter-spacing: 0.26vw;
-                margin-left: 5vw;
-                line-height: 4.63vw;
-            }
-            h3 {
-                font-size: 1.82vw;
-                margin-left: 5vw;
-            }
-            h4 {
-                font-size: 2.82vw;
-                margin-right: 5.21vw;
-            }
-            p {
-                font-size: 2vw;
-                margin-left: 5vw;
-            }
-        }
-
-        /* Mobile Devices (up to 480px) */
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 5.83vw;
-                line-height: 6.67vw;
-                margin-left: 5vw;
-                margin-top: 0.50vh;
-            }
-            h2 {
-                font-size: 4.83vw;
-                letter-spacing: 0.31vw;
-                margin-left: 5vw;
-                align-content: center;
-            }
-            h3 {
-                font-size: 2.5vw;
-                margin-left: 5vw;
-            }
-            h4 {
-                font-size: 2.5vw;
-                margin-right: 4.17vw;
-            }
-            p {
-                font-size: 2.5vw;
-                margin-left: 5vw;
-            }
-        }
-        
-        /*Default*/
-        .two-column{
-            display: flex;
-            gap: 40;
-        }
-
-        .left-side{
-            flex: 1;
-        }
-
-        .mobileapp-img{
-            margin-top: 18vh;
-            margin-right: 15vw;
-            width: 20vw;
-            height: 65vh;
-        }
-
-        .insight-btn{
-            background-color: #444444;
-            color: white;
-            font-size: 1rem;
-            width: 7vw;
-            height: 5vh;
-            margin-left: 5vw;
-            margin-top: 2vh;
-            border: none;
-        }
-        
-        .insight-btn:hover{
-            background-color: white;
-            color: black;
-        }
-
-        .table-box{
-            width: 12vw;
-            height: 25vh;
-            background-color: #16181B;
-            margin-left: 5vw;
-            margin-top: 4vh;
-            box-shadow:
-                1.25vw 1.25vh 0.83vw rgba(0, 0, 0, 0.55),
-                0.63vw 0.63vh 0.52vw rgba(0, 0, 0, 0.35),
-                0 0 1.56vw rgba(0, 0, 0, 0.15);
-        }
-        
-        .subtitle{
-            font-weight: 300;
-            margin-top: 25vh;
-        }
-
-        .title{
-            font-weight: 300;
-            margin-top: 0.10vh;
-        }
-
-        .role-details{
-            font-weight: 300;
-            margin-top: 0.25vh;
-        }
-/*
-        .project-description{
-            font-weight: 300;
-            margin-top: 0.10vh;
-        }
-*/
-         /*Tablet Landscape*/
-        @media (max-width: 1200px){
-            .insight-btn{
-                background-color: #444444;
-                color: white;
-                font-size: 1rem;
-                width: 15vw;
-                height: 5vh;
-                margin-left: 5vw;
-                margin-top: 2vh;
-                border: none;
-            }
-            
-            .table-box{
-                width: 50vw;
-                height: 15vh;
-                background-color: #16181B;
-                margin-left: 5vw;
-                margin-top: 4vh;
-                box-shadow:
-                    1.25vw 1.25vh 0.83vw rgba(0, 0, 0, 0.55),
-                    0.63vw 0.63vh 0.52vw rgba(0, 0, 0, 0.35),
-                    0 0 1.56vw rgba(0, 0, 0, 0.15);
-            }
-            
-    
-        }
-        
-        /*Tablet Portrait & Mobile Landscape*/
-        @media (max-width: 767px){
-            .mobileapp-img{
-                margin-top: 18vh;
-                margin-right: 5vw;
-                width: 20vw;
-                height: 65vh;
-            }
-
-            .insight-btn{
-                background-color: #444444;
-                color: white;
-                font-size: 1rem;
-                width: 25vw;
-                height: 5vh;
-                margin-left: 5vw;
-                margin-top: 2vh;
-                border: none;
-            }
-
-            .table-box{
-                width: 50vw;
-                height: 15vh;
-                background-color: #16181B;
-                margin-left: 5vw;
-                margin-top: 4vh;
-                box-shadow:
-                    1.25vw 1.25vh 0.83vw rgba(0, 0, 0, 0.55),
-                    0.63vw 0.63vh 0.52vw rgba(0, 0, 0, 0.35),
-                    0 0 1.56vw rgba(0, 0, 0, 0.15);
-            }
-        }
-        
-        /*Mobile Devices*/
-        @media (max-width: 480px){
-            .subtitle{
-                font-weight: 300;
-                margin-top: 5vh;
-                margin-bottom: 0;
-                font-size: 5vw;
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            .title{
-                font-weight: 400;
-                margin-top: 0.70vh;
-                margin-bottom: auto;
-                font-size: 7vw;
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            .role-details{
-                font-weight: 300;
-                margin-top: 0.10vh;
-                margin-left: auto;
-                margin-right: auto;
-                visibility: hidden;
-            }
-
-            .project-description{
-                font-weight: 300;
-                margin-top: 0.10vh;
-                margin-left: auto;
-                margin-right: auto;
-                visibility: hidden;
-            }
-
-            .two-column{
-                flex-direction: column-reverse;
-                gap: 0;
-            }
-
-            .left-side,
-            .right-side{
-                height: 50%; 
-                width: 100%;
-                text-align: center;
-            }
-
-            .mobileapp-img{
-                width: 44%;
-                height: 70%;
-                align-content: center;
-                display: block;
-                margin-top: 15vh;
-                margin-bottom: 5vh;
-                margin-left: auto;
-                margin-right: auto;
-            }
-            
-            .insight-btn{
-                background-color: #444444;
-                color: white;
-                font-size: 1rem;
-                width: 9vw;
-                height: 5vh;
-                margin-left: auto;
-                margin-right: auto;
-                margin-top: 2vh;
-                border: none;
-                visibility: hidden;
-            }
-
-            .table-box{
-                width: 100vw;
-                visibility: hidden;
-                height: 15vh;
-                background-color: #16181B;
-                margin-left: 5vw;
-                margin-top: 4vh;
-                box-shadow:
-                    1.25vw 1.25vh 0.83vw rgba(0, 0, 0, 0.55),
-                    0.63vw 0.63vh 0.52vw rgba(0, 0, 0, 0.35),
-                    0 0 1.56vw rgba(0, 0, 0, 0.15);
-            }
-
-            .tool-box{
-                width: 65vw;
-                height: 85vh;
-                background-color: #fafafa;
-                margin-right: auto;
-                margin-left: auto;
-                margin-top: 2vh;
-                margin-bottom: 2vh;
-                box-shadow:
-                    1.25vw 1.25vh 0.83vw rgba(0, 0, 0, 0.25),
-                    0.63vw 0.63vh 0.52vw rgba(0, 0, 0, 0.18),
-                    0 0 1.56vw rgba(0, 0, 0, 0.08);
-            }
-        }
-        
-        /*Default*/
-        .tool-box{
-            width: 65vw;
-            height: 85vh;
-            background-color: #fafafa;
-            margin-right: auto;
-            margin-left: auto;
-            margin-top: 2vh;
-            margin-bottom: 2vh;
-            box-shadow:
-                1.25vw 1.25vh 0.83vw rgba(0, 0, 0, 0.25),
-                0.63vw 0.63vh 0.52vw rgba(0, 0, 0, 0.18),
-                0 0 1.56vw rgba(0, 0, 0, 0.08);
-        }
-
-        /*Tablet Landscape*/
-        @media (max-width: 1200px){
-
-            .tool-box{
-                width: 65vw;
-                height: 85vh;
-                background-color: #fafafa;
-                margin-right: auto;
-                margin-left: auto;
-                margin-top: 2vh;
-                margin-bottom: 2vh;
-                box-shadow:
-                    1.25vw 1.25vh 0.83vw rgba(0, 0, 0, 0.25),
-                    0.63vw 0.63vh 0.52vw rgba(0, 0, 0, 0.18),
-                    0 0 1.56vw rgba(0, 0, 0, 0.08);
-            }
-        }
-
-        /*Mobile Devices*/
-        @media (max-width: 480px){
-
-            .tool-box{
-                width: 65vw;
-                height: 85vh;
-                background-color: #fafafa;
-                margin-right: auto;
-                margin-left: auto;
-                margin-top: 2vh;
-                margin-bottom: 2vh;
-                box-shadow:
-                    1.25vw 1.25vh 0.83vw rgba(0, 0, 0, 0.25),
-                    0.63vw 0.63vh 0.52vw rgba(0, 0, 0, 0.18),
-                    0 0 1.56vw rgba(0, 0, 0, 0.08);
-            }
-        }
-        
-        /*Default*/
-        .process-columns{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            column-gap: 2vw;
-            margin-bottom: 0;
-            
-        }
-
-        .first-side{
-            margin-bottom: 0vh;
-        }
-        
-        .second-side{
-            margin-bottom: 0vh;
+            /* Layout */
+            .two-column { flex-direction: row; gap: 40px; }
+            .mobileapp-img { width: 20vw; height: 65vh; margin-top: 18vh; margin-right: 15vw; }
+            .insight-btn { width: 7vw; visibility: visible; }
+            .table-box { width: 12vw; height: 25vh; visibility: visible; }
         }
         
     </style>
